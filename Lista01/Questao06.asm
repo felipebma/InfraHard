@@ -1,6 +1,6 @@
 .data
 
-A: .word 1
+A: .word 5
 B: .word 10
 
 .text
@@ -21,7 +21,7 @@ sw $a0, 0($sp) # guardando apenas o primeiro argumento já que o segundo permane
 seq $t0, $a0, $a1 # testa se a == b
 beq $t0, $zero, MAIN # recursão não acabou
 
-add $v0, $a0, $zero # como a == b retorna a
+add $v1, $a0, $zero # como a == b retorna a
 addi $sp, $sp, 8 # faz pop de 2 items da pilha
 jr $ra # retorna
 
@@ -31,15 +31,16 @@ jal REC # entra na recursão
 lw $a0, 0($sp) # recursao acabou, começando a desempilhar e efetuar o cálculo
 lw $ra, 4($sp)
 addi $sp, $sp, 8
-add $v0, $v0, $a0 # acumulando o valor final em $v0
+add $v1, $v1, $a0 # acumulando o valor final em $v0
 jr $ra # no final volta para onde o procedimento foi chamado
+j END
 
 INVALID:
 addi $v1, $zero, 1 # inválido porque b > a
 j END
 
 EQUAL:
-add $v0, $zero, $a0 # no caso de serem iguais retorna o próprio valor
+add $v1, $zero, $a0 # no caso de serem iguais retorna o próprio valor
 
 END:
 break
