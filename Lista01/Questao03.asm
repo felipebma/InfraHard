@@ -1,3 +1,5 @@
+#Multiplicar A e B sem usar mult e armazenar na memória
+
 .data
 #Variaveis na Memoria
 	A: .word -2

@@ -1,3 +1,12 @@
+# int a = 2;
+# int b = 1;
+# int m = 3;
+# m = a;
+# if(b < m)
+#	m = b;
+# else
+# 	m=0;
+
 .data
 
 #variáveis na memoria

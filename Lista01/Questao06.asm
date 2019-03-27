@@ -1,7 +1,10 @@
+#Calcular recursivamente a soma de todos os números entre A e B inclusive e armazenar em V1.
+#se A>B Armazenar -1 em V1.
+
 .data
 
-A: .word 5
-B: .word 10
+A: .word 1
+B: .word 100
 
 .text
 lw $a0, A

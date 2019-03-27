@@ -1,3 +1,14 @@
+# int a = ...;
+# int b = ...;
+# x = 0;
+# if ( a >= 0 && a < b )
+# x = 1;
+# else if( a < 0 && a > b )
+#	x = 2;
+# else
+#	x = 3;
+
+
 .data
 
 #variáveis na memoria

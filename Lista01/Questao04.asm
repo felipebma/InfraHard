@@ -1,6 +1,10 @@
+# Ordenar caracteres de uma string colocando-os em lowercase
+# Caso algum caractere n seja letra, armazenar o valor 1 em V1 e encerrar o programa.
+
 .data
 #Carregando Variaveis
 	S: .byte 'E','n','t','r','a','d','A'
+	#S: .byte 'A','C','B'
 	Last: .byte 6
 	um: .byte 1
 .text
@@ -17,26 +21,26 @@ min:
  	add $t0,$t0,1        #Some 1 a t0
  	lb $t1, S($t0)       #Carregue o prox char da STring em t1
  	b for		     #Volte para o laço
-ordenar:
-	sub $t0, $t0, $t0    #t0 - t0 = 0
-for2:
-	bgt $t0,6,fim        #Se já iterou n^2 vezes a String pule
-	lb $t4,S($t0)	     #Carregue o primeiro valor de comparaçao da String
-for3:
-	bgt $t2,6,saiFor3    #Se já iterou n vezes pule
-	lb $t5,S($t2)	     #Carregue o elemento a ser comparado em t5
-	ble $t4,$t5,foraIf   #Se t4 já for menor ou igual que t5 pule
-	sb $t4,S($t2)	     #---------------------------------------
-	sb $t5,S($t0)        # Troque os dois valores de lugar
-	lb $t4,S($t2)        #---------------------------------------
-	j saiFor3	     #Vá Para fora da Iteraçao Interna
-foraIf:
-	add $t2,$t2,1       #Some 1 ao contador t2
-	j for3              #Volte para Iteraçao Interna
-saiFor3:
-	sub $t2,$t2,$t2     #t2 - t2 = 0
-	add $t0,$t0,1       #Some 1 ao contador t0
-	j for2	            #Volte para iteraço Externa
+ 
+ordenar: 	#BubbleSort
+	forOrd:		
+		add $t0,$zero,$zero	#Zera o valor de $t0
+		add $t1,$t0,$zero       #$t1 = $t0
+		forOrd2:	
+			addi $t2,$t1,1  #$t2 = $t1+1(prox. letra)
+			lb $a0,S($t1)   #Carrega char da posiçao $t1 em $a0
+			lb $a1,S($t2)   #Carrega char da posiçao $t2 em $a1
+			if:	bge $a1,$a0,endIf  #Se $a1 for menor que $a0 troca eles de lugar
+				sb $a0,S($t2)      #troca de lugar na String
+				sb $a1,S($t1)      #troca de lugar na String
+			endIf:	
+			addi $t1,$t1,1       #Soma o contador $t1 em 1
+			blt $t1,$t3,forOrd2  #Se não tiver no final da String volte pro ForOrd2
+		subi $t3,$t3,1       #Diminui o tamanho de percorrer a String
+		addi $t0,$t0,1       #Soma 1 no contador $t0
+		blt $t0,$t3,forOrd   #Se Ainda não percorreu tudo volte para o ForOrd
+	j fim                        #Pule o ERROR
+		
 error:
 	lb $v1, 1	    #ERROR
 
