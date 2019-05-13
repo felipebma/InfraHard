@@ -1,5 +1,5 @@
-Quartus II 64-Bit
-Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 7
 3700
 OFF
@@ -70,44 +70,8 @@ Registrador:inst7
 Registrador:inst8
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+|program files|quartus|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-Controler
-# storage
-db|HW.(2).cnf
-db|HW.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-control.v
-f6d25936d9d7f2c093085d0938a58d3
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-Controler:inst15
-}
 # macro_sequence
 
 # end
@@ -139,7 +103,7 @@ ON
 Instr_Reg:inst3
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+|program files|quartus|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
@@ -172,7 +136,7 @@ ON
 Memoria:inst2
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+|program files|quartus|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
@@ -184,7 +148,7 @@ db|HW.(5).cnf
 db|HW.(5).cnf
 # case_insensitive
 # source_file
-|altera|91sp2|quartus|libraries|megafunctions|lpm_ram_dq.tdf
+|program files|quartus|quartus|libraries|megafunctions|lpm_ram_dq.tdf
 8cb8fb4e8f3e90656f489fc92aabb9
 7
 # user_parameter {
@@ -344,7 +308,7 @@ db|HW.(6).cnf
 db|HW.(6).cnf
 # case_insensitive
 # source_file
-|altera|91sp2|quartus|libraries|megafunctions|altram.tdf
+|program files|quartus|quartus|libraries|megafunctions|altram.tdf
 c72d5dfba4da3c5a1457d7f3112cd3b
 7
 # user_parameter {
@@ -512,7 +476,7 @@ db|HW.(7).cnf
 db|HW.(7).cnf
 # case_insensitive
 # source_file
-|altera|91sp2|quartus|libraries|megafunctions|altsyncram.tdf
+|program files|quartus|quartus|libraries|megafunctions|altsyncram.tdf
 67d9a3902c8a461c1d5750189e124f2
 7
 # user_parameter {
@@ -817,7 +781,7 @@ db|HW.(8).cnf
 # case_insensitive
 # source_file
 db|altsyncram_g2a1.tdf
-155748b9a21c1b6347c1c3ef96c273c0
+d8862ea4f7a5427dbb1d3425791064
 7
 # used_port {
 wren_a
@@ -904,7 +868,7 @@ address_a0
 }
 # memory_file {
 instrucoes.mif
-1cbff2add6fc11ebcda045ffbac916ff
+59651c2bba661b9936f2faea145836
 }
 # hierarchies {
 Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated
@@ -1015,7 +979,7 @@ ON
 Ula32:inst11
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+|program files|quartus|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
@@ -1084,7 +1048,7 @@ ON
 Banco_reg:inst6
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+|program files|quartus|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
@@ -1193,6 +1157,42 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 MUXUlaSourceB:inst13
+}
+# macro_sequence
+
+# end
+# entity
+Controler
+# storage
+db|HW.(2).cnf
+db|HW.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+control.v
+e8c37953f50d55ff7754de089723cd
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Controler:inst15
 }
 # macro_sequence
 

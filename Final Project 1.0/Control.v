@@ -26,55 +26,87 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				Estado <= Fetch;
 			end
 			Fetch: begin //Solicita Leitura da Memoria e faz PC + 4
-				PCWrite <= 1'b1;
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b1;
+				
 				PCSrc <= 3'b000;
 				ALUop <= 3'b001;
 				ALUSrcA <= 2'b00;
-				AWrite <= 1'b1;
 				ALUSrcB <= 3'b001;
-				BWrite <= 1'b1;
 				Reset <= 1'b0;
 				IorD <= 3'b100;
-				IRWrite <= 1'b0;
-				MemWrite <= 1'b0;
 				MemToReg <= 4'b0000;
-				RegWrite <= 1'b0;
 				RegDst <= 2'b00;
-				ALUout <= 1'b1;
 				Estado <= Wait1;				
 			end
 			Wait1: begin
-				PCWrite <= 1'b0;
-				ALUout <= 1'b0;
+				PCWrite <= 1'b1;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
 				AWrite <= 1'b0;
 				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				
+				ALUout <= 1'b0;
 				Estado <= InstRead;
 			end
 			InstRead: begin //Carrega Dados da Memoria nos Registradores de Instrução e Operação (A e B).
 				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
 				IRWrite <= 1'b1;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				
 				Estado <= Wait2;
 			end
 			Wait2: begin
-				IRWrite <= 1'b0;
 				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b1;
+				BWrite <= 1'b1;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				
 				Estado <= OpcodeRead;			
 			end
-			WriteRegALU: begin
+			WriteRegALU: begin //Carrea info do ALUout no Registrador
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b1;
+				ALUout <= 1'b0;
+				
 				MemToReg <= 4'b0000;
 				RegDst <= 2'b11;
-				RegWrite <= 1'b1;
 				Estado <= Fetch;
 			end
 			OpcodeRead: begin
 				case(opcode)
 					6'd0: begin
 						case(func)
-							6'b100000: begin //Add
+							6'b100000: begin //Add e salva no ALUout
+								PCWrite <= 1'b0;
+								MemWrite <= 1'b0;
+								IRWrite <= 1'b0;
+								AWrite <= 1'b0;
+								BWrite <= 1'b0;
+								RegWrite <= 1'b0;
+								ALUout <= 1'b1;
+								
 								ALUop <= 3'b001;
 								ALUSrcA <= 2'b10;
 								ALUSrcB <= 3'b000;
-								ALUout <= 1'b1;
 								Estado <= WriteRegALU;
 							end
 						endcase

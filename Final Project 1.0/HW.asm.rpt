@@ -1,6 +1,6 @@
 Assembler report for HW
-Thu May 09 12:57:53 2019
-Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+Mon May 13 05:26:45 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
 ---------------------
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/wfmf/Desktop/Final Project 1.0/HW.sof
-  6. Assembler Device Options: C:/Users/wfmf/Desktop/Final Project 1.0/HW.pof
+  5. Assembler Device Options: C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/HW.sof
+  6. Assembler Device Options: C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/HW.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu May 09 12:57:53 2019 ;
+; Assembler Status      ; Successful - Mon May 13 05:26:45 2019 ;
 ; Revision Name         ; HW                                    ;
 ; Top-level Entity Name ; HW                                    ;
 ; Family                ; Stratix II                            ;
@@ -79,53 +79,53 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+------------------------------------------------+
-; Assembler Generated Files                      ;
-+------------------------------------------------+
-; File Name                                      ;
-+------------------------------------------------+
-; C:/Users/wfmf/Desktop/Final Project 1.0/HW.sof ;
-; C:/Users/wfmf/Desktop/Final Project 1.0/HW.pof ;
-+------------------------------------------------+
++------------------------------------------------------------------------+
+; Assembler Generated Files                                              ;
++------------------------------------------------------------------------+
+; File Name                                                              ;
++------------------------------------------------------------------------+
+; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/HW.sof ;
+; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/HW.pof ;
++------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/wfmf/Desktop/Final Project 1.0/HW.sof ;
-+----------------+---------------------------------------------------------+
-; Option         ; Setting                                                 ;
-+----------------+---------------------------------------------------------+
-; Device         ; EP2S15F484C3                                            ;
-; JTAG usercode  ; 0xFFFFFFFF                                              ;
-; Checksum       ; 0x00426DEF                                              ;
-+----------------+---------------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/HW.sof ;
++----------------+---------------------------------------------------------------------------------+
+; Option         ; Setting                                                                         ;
++----------------+---------------------------------------------------------------------------------+
+; Device         ; EP2S15F484C3                                                                    ;
+; JTAG usercode  ; 0xFFFFFFFF                                                                      ;
+; Checksum       ; 0x0042965A                                                                      ;
++----------------+---------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/wfmf/Desktop/Final Project 1.0/HW.pof ;
-+--------------------+-----------------------------------------------------+
-; Option             ; Setting                                             ;
-+--------------------+-----------------------------------------------------+
-; Device             ; EPC16                                               ;
-; JTAG usercode      ; 0xFFFFFFFF                                          ;
-; Checksum           ; 0x1E98C8DC                                          ;
-; Compression Ratio  ; 2                                                   ;
-+--------------------+-----------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/HW.pof ;
++--------------------+-----------------------------------------------------------------------------+
+; Option             ; Setting                                                                     ;
++--------------------+-----------------------------------------------------------------------------+
+; Device             ; EPC16                                                                       ;
+; JTAG usercode      ; 0xFFFFFFFF                                                                  ;
+; Checksum           ; 0x1E9811AD                                                                  ;
+; Compression Ratio  ; 2                                                                           ;
++--------------------+-----------------------------------------------------------------------------+
 
 
 +--------------------+
 ; Assembler Messages ;
 +--------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Assembler
-    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Thu May 09 12:57:51 2019
+Info: Running Quartus II Assembler
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon May 13 05:26:39 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off HW -c HW
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
-Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4436 megabytes
-    Info: Processing ended: Thu May 09 12:57:53 2019
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 229 megabytes
+    Info: Processing ended: Mon May 13 05:26:45 2019
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
 
 
