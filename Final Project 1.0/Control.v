@@ -1,7 +1,7 @@
 module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite,PCSrc,ALUop,ALUSrcA,ALUSrcB,RegWrite,RegDst,ALUout,AWrite,BWrite);
 	input wire [5:0] opcode,func;
 	input wire clock;
-	reg [5:0] Fetch,Wait1,InstRead,Wait2,OpcodeRead,WriteRegALU,ResetS;
+	reg [5:0] Fetch,Wait1,InstRead,Wait2,OpcodeRead,WriteRegALU,ResetS,WriteRegALU2;
 	output reg Reset,PCWrite,MemWrite,IRWrite,RegWrite,ALUout,AWrite,BWrite;
 	output reg [1:0] ALUSrcA,RegDst;
 	output reg [2:0] IorD,PCSrc,ALUop,ALUSrcB;
@@ -16,6 +16,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 		Wait2 <= 6'd4;
 		OpcodeRead <= 6'd5;
 		WriteRegALU <= 6'd6;
+		WriteRegALU2 <= 6'd7;
 	end
 	
 		
@@ -91,6 +92,19 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegDst <= 2'b11;
 				Estado <= Fetch;
 			end
+			WriteRegALU2: begin //Carrega info do ALUout no Registrador (imediate)
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b1;
+				ALUout <= 1'b0;
+				
+				MemToReg <= 4'b0000;
+				RegDst <= 2'b00;
+				Estado <= Fetch;
+			end
 			OpcodeRead: begin
 				case(opcode)
 					6'd0: begin
@@ -109,8 +123,65 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								ALUSrcB <= 3'b000;
 								Estado <= WriteRegALU;
 							end
+							6'b100010: begin //Sub e salva no ALUout
+								PCWrite <= 1'b0;
+								MemWrite <= 1'b0;
+								IRWrite <= 1'b0;
+								AWrite <= 1'b0;
+								BWrite <= 1'b0;
+								RegWrite <= 1'b0;
+								ALUout <= 1'b1;
+								
+								ALUop <= 3'b010;
+								ALUSrcA <= 2'b10;
+								ALUSrcB <= 3'b000;
+								Estado <= WriteRegALU;
+							end
+							6'b100100: begin //And e salva no ALUout
+								PCWrite <= 1'b0;
+								MemWrite <= 1'b0;
+								IRWrite <= 1'b0;
+								AWrite <= 1'b0;
+								BWrite <= 1'b0;
+								RegWrite <= 1'b0;
+								ALUout <= 1'b1;
+								
+								ALUop <= 3'b011;
+								ALUSrcA <= 2'b10;
+								ALUSrcB <= 3'b000;
+								Estado <= WriteRegALU;
+							end
 						endcase
-					end		
+					end
+					6'd8: begin //Addi e salva em ALUout
+						PCWrite <= 1'b0;
+						MemWrite <= 1'b0;
+						IRWrite <= 1'b0;
+						AWrite <= 1'b0;
+						BWrite <= 1'b0;
+						RegWrite <= 1'b0;
+						ALUout <= 1'b1;
+								
+						RegDst <= 2'b00;
+						ALUop <= 3'b001;
+						ALUSrcA <= 2'b10;
+						ALUSrcB <= 3'b010;
+						Estado <= WriteRegALU2;
+					end
+					6'd9: begin //Addiu e salva em ALUout
+						PCWrite <= 1'b0;
+						MemWrite <= 1'b0;
+						IRWrite <= 1'b0;
+						AWrite <= 1'b0;
+						BWrite <= 1'b0;
+						RegWrite <= 1'b0;
+						ALUout <= 1'b1;
+								
+						ALUop <= 3'b001;
+						ALUSrcA <= 2'b10;
+						ALUSrcB <= 3'b010;
+						Estado <= WriteRegALU2;	
+					end
 				endcase
 			end
 				
