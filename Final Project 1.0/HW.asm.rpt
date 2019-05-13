@@ -1,5 +1,5 @@
 Assembler report for HW
-Mon May 13 12:36:42 2019
+Mon May 13 18:30:29 2019
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon May 13 12:36:42 2019 ;
+; Assembler Status      ; Successful - Mon May 13 18:30:29 2019 ;
 ; Revision Name         ; HW                                    ;
 ; Top-level Entity Name ; HW                                    ;
 ; Family                ; Stratix II                            ;
@@ -96,7 +96,7 @@ applicable agreement for further details.
 +----------------+---------------------------------------------------------------------------------+
 ; Device         ; EP2S15F484C3                                                                    ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                                      ;
-; Checksum       ; 0x0043FE5A                                                                      ;
+; Checksum       ; 0x00469BB2                                                                      ;
 +----------------+---------------------------------------------------------------------------------+
 
 
@@ -107,7 +107,7 @@ applicable agreement for further details.
 +--------------------+-----------------------------------------------------------------------------+
 ; Device             ; EPC16                                                                       ;
 ; JTAG usercode      ; 0xFFFFFFFF                                                                  ;
-; Checksum           ; 0x1E92B95B                                                                  ;
+; Checksum           ; 0x1E8819C8                                                                  ;
 ; Compression Ratio  ; 2                                                                           ;
 +--------------------+-----------------------------------------------------------------------------+
 
@@ -118,14 +118,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon May 13 12:36:37 2019
+    Info: Processing started: Mon May 13 18:30:24 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off HW -c HW
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 229 megabytes
-    Info: Processing ended: Mon May 13 12:36:43 2019
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Processing ended: Mon May 13 18:30:29 2019
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
 
 
