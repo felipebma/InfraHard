@@ -1,0 +1,424 @@
+Classic Timing Analyzer report for HW
+Thu May 09 12:57:55 2019
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLK'
+  7. tco
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                   ;
++------------------------------+-------+---------------+----------------------------------+---------------------------+------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                      ; To                           ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------------+------------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 7.003 ns                         ; Registrador:inst|Saida[1] ; PC[1]                        ; CLK        ; --       ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; 146.54 MHz ( period = 6.824 ns ) ; Registrador:inst|Saida[3] ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                           ;                              ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------------+------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; Off                ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK'                                                                                                                                                                                                                                                     ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                        ; To                           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 146.54 MHz ( period = 6.824 ns )                    ; Registrador:inst|Saida[3]   ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.628 ns                ;
+; N/A                                     ; 146.56 MHz ( period = 6.823 ns )                    ; Registrador:inst|Saida[3]   ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.627 ns                ;
+; N/A                                     ; 147.82 MHz ( period = 6.765 ns )                    ; Registrador:inst7|Saida[1]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.572 ns                ;
+; N/A                                     ; 147.84 MHz ( period = 6.764 ns )                    ; Registrador:inst7|Saida[1]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.571 ns                ;
+; N/A                                     ; 148.65 MHz ( period = 6.727 ns )                    ; Controler:inst15|ALUSrcA[1] ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.530 ns                ;
+; N/A                                     ; 148.68 MHz ( period = 6.726 ns )                    ; Controler:inst15|ALUSrcA[1] ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.529 ns                ;
+; N/A                                     ; 149.21 MHz ( period = 6.702 ns )                    ; Registrador:inst|Saida[5]   ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.506 ns                ;
+; N/A                                     ; 149.23 MHz ( period = 6.701 ns )                    ; Registrador:inst|Saida[5]   ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.505 ns                ;
+; N/A                                     ; 149.79 MHz ( period = 6.676 ns )                    ; Registrador:inst7|Saida[3]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.480 ns                ;
+; N/A                                     ; 149.81 MHz ( period = 6.675 ns )                    ; Registrador:inst7|Saida[3]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.479 ns                ;
+; N/A                                     ; 150.49 MHz ( period = 6.645 ns )                    ; Controler:inst15|ALUSrcB[0] ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.448 ns                ;
+; N/A                                     ; 150.51 MHz ( period = 6.644 ns )                    ; Controler:inst15|ALUSrcB[0] ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.447 ns                ;
+; N/A                                     ; 150.53 MHz ( period = 6.643 ns )                    ; Registrador:inst8|Saida[0]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.450 ns                ;
+; N/A                                     ; 150.56 MHz ( period = 6.642 ns )                    ; Registrador:inst8|Saida[0]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.449 ns                ;
+; N/A                                     ; 151.03 MHz ( period = 6.621 ns )                    ; Registrador:inst7|Saida[0]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.422 ns                ;
+; N/A                                     ; 151.06 MHz ( period = 6.620 ns )                    ; Registrador:inst7|Saida[0]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.421 ns                ;
+; N/A                                     ; 151.38 MHz ( period = 6.606 ns )                    ; Registrador:inst|Saida[0]   ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.415 ns                ;
+; N/A                                     ; 151.40 MHz ( period = 6.605 ns )                    ; Registrador:inst|Saida[0]   ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.414 ns                ;
+; N/A                                     ; 151.42 MHz ( period = 6.604 ns )                    ; Registrador:inst|Saida[1]   ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.413 ns                ;
+; N/A                                     ; 151.45 MHz ( period = 6.603 ns )                    ; Registrador:inst|Saida[1]   ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.412 ns                ;
+; N/A                                     ; 152.37 MHz ( period = 6.563 ns )                    ; Registrador:inst|Saida[3]   ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 6.367 ns                ;
+; N/A                                     ; 152.39 MHz ( period = 6.562 ns )                    ; Registrador:inst|Saida[3]   ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 6.366 ns                ;
+; N/A                                     ; 152.42 MHz ( period = 6.561 ns )                    ; Registrador:inst8|Saida[1]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.368 ns                ;
+; N/A                                     ; 152.44 MHz ( period = 6.560 ns )                    ; Registrador:inst8|Saida[1]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.367 ns                ;
+; N/A                                     ; 153.75 MHz ( period = 6.504 ns )                    ; Registrador:inst7|Saida[1]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 6.311 ns                ;
+; N/A                                     ; 153.78 MHz ( period = 6.503 ns )                    ; Registrador:inst7|Saida[1]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 6.310 ns                ;
+; N/A                                     ; 154.66 MHz ( period = 6.466 ns )                    ; Controler:inst15|ALUSrcA[1] ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 6.269 ns                ;
+; N/A                                     ; 154.68 MHz ( period = 6.465 ns )                    ; Controler:inst15|ALUSrcA[1] ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 6.268 ns                ;
+; N/A                                     ; 155.26 MHz ( period = 6.441 ns )                    ; Registrador:inst|Saida[5]   ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 6.245 ns                ;
+; N/A                                     ; 155.28 MHz ( period = 6.440 ns )                    ; Registrador:inst|Saida[5]   ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 6.244 ns                ;
+; N/A                                     ; 155.88 MHz ( period = 6.415 ns )                    ; Registrador:inst7|Saida[3]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 6.219 ns                ;
+; N/A                                     ; 155.91 MHz ( period = 6.414 ns )                    ; Registrador:inst7|Saida[3]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 6.218 ns                ;
+; N/A                                     ; 156.64 MHz ( period = 6.384 ns )                    ; Controler:inst15|ALUSrcB[0] ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 6.187 ns                ;
+; N/A                                     ; 156.67 MHz ( period = 6.383 ns )                    ; Controler:inst15|ALUSrcB[0] ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 6.186 ns                ;
+; N/A                                     ; 156.69 MHz ( period = 6.382 ns )                    ; Registrador:inst8|Saida[0]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 6.189 ns                ;
+; N/A                                     ; 156.72 MHz ( period = 6.381 ns )                    ; Registrador:inst8|Saida[0]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 6.188 ns                ;
+; N/A                                     ; 157.04 MHz ( period = 6.368 ns )                    ; Registrador:inst|Saida[7]   ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.172 ns                ;
+; N/A                                     ; 157.04 MHz ( period = 6.368 ns )                    ; Registrador:inst8|Saida[2]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.177 ns                ;
+; N/A                                     ; 157.06 MHz ( period = 6.367 ns )                    ; Registrador:inst|Saida[7]   ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.171 ns                ;
+; N/A                                     ; 157.06 MHz ( period = 6.367 ns )                    ; Registrador:inst8|Saida[2]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.176 ns                ;
+; N/A                                     ; 157.23 MHz ( period = 6.360 ns )                    ; Registrador:inst7|Saida[0]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 6.161 ns                ;
+; N/A                                     ; 157.26 MHz ( period = 6.359 ns )                    ; Registrador:inst7|Saida[0]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 6.160 ns                ;
+; N/A                                     ; 157.60 MHz ( period = 6.345 ns )                    ; Registrador:inst|Saida[0]   ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 6.154 ns                ;
+; N/A                                     ; 157.63 MHz ( period = 6.344 ns )                    ; Registrador:inst|Saida[0]   ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 6.153 ns                ;
+; N/A                                     ; 157.65 MHz ( period = 6.343 ns )                    ; Registrador:inst|Saida[1]   ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 6.152 ns                ;
+; N/A                                     ; 157.68 MHz ( period = 6.342 ns )                    ; Registrador:inst|Saida[1]   ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 6.151 ns                ;
+; N/A                                     ; 158.60 MHz ( period = 6.305 ns )                    ; Registrador:inst8|Saida[4]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.107 ns                ;
+; N/A                                     ; 158.63 MHz ( period = 6.304 ns )                    ; Registrador:inst8|Saida[4]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.106 ns                ;
+; N/A                                     ; 158.73 MHz ( period = 6.300 ns )                    ; Registrador:inst8|Saida[1]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 6.107 ns                ;
+; N/A                                     ; 158.76 MHz ( period = 6.299 ns )                    ; Registrador:inst8|Saida[1]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 6.106 ns                ;
+; N/A                                     ; 158.91 MHz ( period = 6.293 ns )                    ; Registrador:inst|Saida[3]   ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 6.097 ns                ;
+; N/A                                     ; 158.98 MHz ( period = 6.290 ns )                    ; Registrador:inst|Saida[3]   ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 6.094 ns                ;
+; N/A                                     ; 159.54 MHz ( period = 6.268 ns )                    ; Registrador:inst8|Saida[3]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.077 ns                ;
+; N/A                                     ; 159.57 MHz ( period = 6.267 ns )                    ; Registrador:inst8|Saida[3]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.076 ns                ;
+; N/A                                     ; 159.64 MHz ( period = 6.264 ns )                    ; Registrador:inst7|Saida[5]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.068 ns                ;
+; N/A                                     ; 159.67 MHz ( period = 6.263 ns )                    ; Registrador:inst7|Saida[5]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.067 ns                ;
+; N/A                                     ; 160.13 MHz ( period = 6.245 ns )                    ; Registrador:inst7|Saida[2]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 6.069 ns                ;
+; N/A                                     ; 160.15 MHz ( period = 6.244 ns )                    ; Registrador:inst7|Saida[2]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 6.068 ns                ;
+; N/A                                     ; 160.41 MHz ( period = 6.234 ns )                    ; Registrador:inst7|Saida[1]  ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 6.041 ns                ;
+; N/A                                     ; 160.49 MHz ( period = 6.231 ns )                    ; Registrador:inst7|Saida[1]  ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 6.038 ns                ;
+; N/A                                     ; 161.39 MHz ( period = 6.196 ns )                    ; Controler:inst15|ALUSrcA[1] ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.999 ns                ;
+; N/A                                     ; 161.47 MHz ( period = 6.193 ns )                    ; Controler:inst15|ALUSrcA[1] ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.996 ns                ;
+; N/A                                     ; 162.05 MHz ( period = 6.171 ns )                    ; Registrador:inst|Saida[5]   ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.975 ns                ;
+; N/A                                     ; 162.13 MHz ( period = 6.168 ns )                    ; Registrador:inst|Saida[5]   ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.972 ns                ;
+; N/A                                     ; 162.73 MHz ( period = 6.145 ns )                    ; Registrador:inst7|Saida[3]  ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.949 ns                ;
+; N/A                                     ; 162.81 MHz ( period = 6.142 ns )                    ; Registrador:inst7|Saida[3]  ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.946 ns                ;
+; N/A                                     ; 163.56 MHz ( period = 6.114 ns )                    ; Controler:inst15|ALUSrcB[0] ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.917 ns                ;
+; N/A                                     ; 163.61 MHz ( period = 6.112 ns )                    ; Registrador:inst8|Saida[0]  ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.919 ns                ;
+; N/A                                     ; 163.64 MHz ( period = 6.111 ns )                    ; Controler:inst15|ALUSrcB[0] ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.914 ns                ;
+; N/A                                     ; 163.69 MHz ( period = 6.109 ns )                    ; Registrador:inst8|Saida[0]  ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.916 ns                ;
+; N/A                                     ; 163.75 MHz ( period = 6.107 ns )                    ; Registrador:inst|Saida[7]   ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.911 ns                ;
+; N/A                                     ; 163.75 MHz ( period = 6.107 ns )                    ; Registrador:inst8|Saida[2]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.916 ns                ;
+; N/A                                     ; 163.77 MHz ( period = 6.106 ns )                    ; Registrador:inst|Saida[7]   ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.910 ns                ;
+; N/A                                     ; 163.77 MHz ( period = 6.106 ns )                    ; Registrador:inst8|Saida[2]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.915 ns                ;
+; N/A                                     ; 164.20 MHz ( period = 6.090 ns )                    ; Registrador:inst7|Saida[0]  ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.891 ns                ;
+; N/A                                     ; 164.28 MHz ( period = 6.087 ns )                    ; Registrador:inst7|Saida[0]  ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.888 ns                ;
+; N/A                                     ; 164.61 MHz ( period = 6.075 ns )                    ; Registrador:inst|Saida[0]   ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.884 ns                ;
+; N/A                                     ; 164.66 MHz ( period = 6.073 ns )                    ; Registrador:inst|Saida[1]   ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.882 ns                ;
+; N/A                                     ; 164.69 MHz ( period = 6.072 ns )                    ; Registrador:inst|Saida[0]   ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.881 ns                ;
+; N/A                                     ; 164.74 MHz ( period = 6.070 ns )                    ; Registrador:inst|Saida[1]   ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.879 ns                ;
+; N/A                                     ; 165.45 MHz ( period = 6.044 ns )                    ; Registrador:inst8|Saida[4]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.846 ns                ;
+; N/A                                     ; 165.48 MHz ( period = 6.043 ns )                    ; Registrador:inst8|Saida[4]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.845 ns                ;
+; N/A                                     ; 165.81 MHz ( period = 6.031 ns )                    ; Registrador:inst8|Saida[9]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 5.846 ns                ;
+; N/A                                     ; 165.84 MHz ( period = 6.030 ns )                    ; Registrador:inst8|Saida[9]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 5.845 ns                ;
+; N/A                                     ; 165.84 MHz ( period = 6.030 ns )                    ; Registrador:inst8|Saida[1]  ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.837 ns                ;
+; N/A                                     ; 165.92 MHz ( period = 6.027 ns )                    ; Registrador:inst8|Saida[1]  ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.834 ns                ;
+; N/A                                     ; 165.92 MHz ( period = 6.027 ns )                    ; Registrador:inst|Saida[3]   ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.831 ns                ;
+; N/A                                     ; 166.03 MHz ( period = 6.023 ns )                    ; Registrador:inst|Saida[3]   ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.827 ns                ;
+; N/A                                     ; 166.47 MHz ( period = 6.007 ns )                    ; Registrador:inst8|Saida[3]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.816 ns                ;
+; N/A                                     ; 166.50 MHz ( period = 6.006 ns )                    ; Registrador:inst8|Saida[3]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.815 ns                ;
+; N/A                                     ; 166.58 MHz ( period = 6.003 ns )                    ; Registrador:inst7|Saida[5]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.807 ns                ;
+; N/A                                     ; 166.61 MHz ( period = 6.002 ns )                    ; Registrador:inst7|Saida[5]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.806 ns                ;
+; N/A                                     ; 167.11 MHz ( period = 5.984 ns )                    ; Registrador:inst7|Saida[2]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.808 ns                ;
+; N/A                                     ; 167.14 MHz ( period = 5.983 ns )                    ; Registrador:inst7|Saida[2]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.807 ns                ;
+; N/A                                     ; 167.28 MHz ( period = 5.978 ns )                    ; Registrador:inst8|Saida[5]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 5.787 ns                ;
+; N/A                                     ; 167.31 MHz ( period = 5.977 ns )                    ; Registrador:inst8|Saida[5]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 5.786 ns                ;
+; N/A                                     ; 167.56 MHz ( period = 5.968 ns )                    ; Registrador:inst7|Saida[1]  ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.775 ns                ;
+; N/A                                     ; 167.64 MHz ( period = 5.965 ns )                    ; Registrador:inst8|Saida[6]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 5.769 ns                ;
+; N/A                                     ; 167.67 MHz ( period = 5.964 ns )                    ; Registrador:inst8|Saida[6]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 5.768 ns                ;
+; N/A                                     ; 167.67 MHz ( period = 5.964 ns )                    ; Registrador:inst7|Saida[1]  ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.771 ns                ;
+; N/A                                     ; 168.24 MHz ( period = 5.944 ns )                    ; Registrador:inst8|Saida[7]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 5.759 ns                ;
+; N/A                                     ; 168.27 MHz ( period = 5.943 ns )                    ; Registrador:inst8|Saida[7]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 5.758 ns                ;
+; N/A                                     ; 168.63 MHz ( period = 5.930 ns )                    ; Controler:inst15|ALUSrcA[1] ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.733 ns                ;
+; N/A                                     ; 168.75 MHz ( period = 5.926 ns )                    ; Controler:inst15|ALUSrcA[1] ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.729 ns                ;
+; N/A                                     ; 169.00 MHz ( period = 5.917 ns )                    ; Registrador:inst7|Saida[9]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 5.723 ns                ;
+; N/A                                     ; 169.03 MHz ( period = 5.916 ns )                    ; Registrador:inst7|Saida[9]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 5.722 ns                ;
+; N/A                                     ; 169.35 MHz ( period = 5.905 ns )                    ; Registrador:inst|Saida[5]   ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.709 ns                ;
+; N/A                                     ; 169.46 MHz ( period = 5.901 ns )                    ; Registrador:inst|Saida[5]   ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.705 ns                ;
+; N/A                                     ; 170.10 MHz ( period = 5.879 ns )                    ; Registrador:inst7|Saida[3]  ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.683 ns                ;
+; N/A                                     ; 170.21 MHz ( period = 5.875 ns )                    ; Registrador:inst7|Saida[3]  ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.679 ns                ;
+; N/A                                     ; 170.24 MHz ( period = 5.874 ns )                    ; Registrador:inst7|Saida[7]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 5.678 ns                ;
+; N/A                                     ; 170.27 MHz ( period = 5.873 ns )                    ; Registrador:inst7|Saida[7]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 5.677 ns                ;
+; N/A                                     ; 170.53 MHz ( period = 5.864 ns )                    ; Registrador:inst|Saida[9]   ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 5.670 ns                ;
+; N/A                                     ; 170.56 MHz ( period = 5.863 ns )                    ; Registrador:inst|Saida[9]   ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 5.669 ns                ;
+; N/A                                     ; 171.00 MHz ( period = 5.848 ns )                    ; Controler:inst15|ALUSrcB[0] ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.651 ns                ;
+; N/A                                     ; 171.06 MHz ( period = 5.846 ns )                    ; Registrador:inst8|Saida[0]  ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.653 ns                ;
+; N/A                                     ; 171.12 MHz ( period = 5.844 ns )                    ; Controler:inst15|ALUSrcB[0] ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.647 ns                ;
+; N/A                                     ; 171.17 MHz ( period = 5.842 ns )                    ; Registrador:inst8|Saida[0]  ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.649 ns                ;
+; N/A                                     ; 171.32 MHz ( period = 5.837 ns )                    ; Registrador:inst|Saida[7]   ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.641 ns                ;
+; N/A                                     ; 171.32 MHz ( period = 5.837 ns )                    ; Registrador:inst8|Saida[2]  ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.646 ns                ;
+; N/A                                     ; 171.35 MHz ( period = 5.836 ns )                    ; Registrador:inst8|Saida[8]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 5.647 ns                ;
+; N/A                                     ; 171.38 MHz ( period = 5.835 ns )                    ; Registrador:inst8|Saida[8]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 5.646 ns                ;
+; N/A                                     ; 171.41 MHz ( period = 5.834 ns )                    ; Registrador:inst|Saida[7]   ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.638 ns                ;
+; N/A                                     ; 171.41 MHz ( period = 5.834 ns )                    ; Registrador:inst8|Saida[2]  ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.643 ns                ;
+; N/A                                     ; 171.50 MHz ( period = 5.831 ns )                    ; Registrador:inst7|Saida[4]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 5.633 ns                ;
+; N/A                                     ; 171.53 MHz ( period = 5.830 ns )                    ; Registrador:inst7|Saida[4]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 5.632 ns                ;
+; N/A                                     ; 171.70 MHz ( period = 5.824 ns )                    ; Registrador:inst7|Saida[0]  ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.625 ns                ;
+; N/A                                     ; 171.82 MHz ( period = 5.820 ns )                    ; Registrador:inst7|Saida[0]  ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.621 ns                ;
+; N/A                                     ; 172.15 MHz ( period = 5.809 ns )                    ; Registrador:inst|Saida[0]   ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.618 ns                ;
+; N/A                                     ; 172.21 MHz ( period = 5.807 ns )                    ; Registrador:inst|Saida[1]   ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.616 ns                ;
+; N/A                                     ; 172.27 MHz ( period = 5.805 ns )                    ; Registrador:inst|Saida[0]   ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.614 ns                ;
+; N/A                                     ; 172.32 MHz ( period = 5.803 ns )                    ; Registrador:inst|Saida[1]   ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.612 ns                ;
+; N/A                                     ; 173.19 MHz ( period = 5.774 ns )                    ; Registrador:inst8|Saida[4]  ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.576 ns                ;
+; N/A                                     ; 173.28 MHz ( period = 5.771 ns )                    ; Registrador:inst8|Saida[4]  ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.573 ns                ;
+; N/A                                     ; 173.31 MHz ( period = 5.770 ns )                    ; Registrador:inst8|Saida[9]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.585 ns                ;
+; N/A                                     ; 173.34 MHz ( period = 5.769 ns )                    ; Registrador:inst8|Saida[9]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.584 ns                ;
+; N/A                                     ; 173.49 MHz ( period = 5.764 ns )                    ; Registrador:inst8|Saida[1]  ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.571 ns                ;
+; N/A                                     ; 173.61 MHz ( period = 5.760 ns )                    ; Registrador:inst8|Saida[1]  ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.567 ns                ;
+; N/A                                     ; 174.31 MHz ( period = 5.737 ns )                    ; Registrador:inst8|Saida[3]  ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.546 ns                ;
+; N/A                                     ; 174.40 MHz ( period = 5.734 ns )                    ; Registrador:inst8|Saida[3]  ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.543 ns                ;
+; N/A                                     ; 174.43 MHz ( period = 5.733 ns )                    ; Registrador:inst7|Saida[5]  ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.537 ns                ;
+; N/A                                     ; 174.52 MHz ( period = 5.730 ns )                    ; Registrador:inst7|Saida[5]  ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.534 ns                ;
+; N/A                                     ; 174.92 MHz ( period = 5.717 ns )                    ; Registrador:inst7|Saida[6]  ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 5.521 ns                ;
+; N/A                                     ; 174.92 MHz ( period = 5.717 ns )                    ; Registrador:inst8|Saida[5]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.526 ns                ;
+; N/A                                     ; 174.95 MHz ( period = 5.716 ns )                    ; Registrador:inst7|Saida[6]  ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 5.520 ns                ;
+; N/A                                     ; 174.95 MHz ( period = 5.716 ns )                    ; Registrador:inst8|Saida[5]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.525 ns                ;
+; N/A                                     ; 175.01 MHz ( period = 5.714 ns )                    ; Registrador:inst7|Saida[2]  ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.538 ns                ;
+; N/A                                     ; 175.10 MHz ( period = 5.711 ns )                    ; Registrador:inst7|Saida[2]  ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.535 ns                ;
+; N/A                                     ; 175.32 MHz ( period = 5.704 ns )                    ; Registrador:inst8|Saida[6]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.508 ns                ;
+; N/A                                     ; 175.35 MHz ( period = 5.703 ns )                    ; Registrador:inst8|Saida[6]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.507 ns                ;
+; N/A                                     ; 175.96 MHz ( period = 5.683 ns )                    ; Registrador:inst8|Saida[7]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.498 ns                ;
+; N/A                                     ; 175.99 MHz ( period = 5.682 ns )                    ; Registrador:inst8|Saida[7]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.497 ns                ;
+; N/A                                     ; 176.77 MHz ( period = 5.657 ns )                    ; Registrador:inst|Saida[3]   ; Registrador:inst12|Saida[23] ; CLK        ; CLK      ; None                        ; None                      ; 5.463 ns                ;
+; N/A                                     ; 176.80 MHz ( period = 5.656 ns )                    ; Registrador:inst7|Saida[9]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.462 ns                ;
+; N/A                                     ; 176.80 MHz ( period = 5.656 ns )                    ; Registrador:inst|Saida[3]   ; Registrador:inst12|Saida[22] ; CLK        ; CLK      ; None                        ; None                      ; 5.462 ns                ;
+; N/A                                     ; 176.83 MHz ( period = 5.655 ns )                    ; Registrador:inst7|Saida[9]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.461 ns                ;
+; N/A                                     ; 176.90 MHz ( period = 5.653 ns )                    ; Registrador:inst|Saida[2]   ; Registrador:inst12|Saida[31] ; CLK        ; CLK      ; None                        ; None                      ; 5.462 ns                ;
+; N/A                                     ; 176.93 MHz ( period = 5.652 ns )                    ; Registrador:inst|Saida[2]   ; Registrador:inst12|Saida[30] ; CLK        ; CLK      ; None                        ; None                      ; 5.461 ns                ;
+; N/A                                     ; 178.16 MHz ( period = 5.613 ns )                    ; Registrador:inst7|Saida[7]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.417 ns                ;
+; N/A                                     ; 178.19 MHz ( period = 5.612 ns )                    ; Registrador:inst7|Saida[7]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.416 ns                ;
+; N/A                                     ; 178.48 MHz ( period = 5.603 ns )                    ; Registrador:inst|Saida[9]   ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.409 ns                ;
+; N/A                                     ; 178.51 MHz ( period = 5.602 ns )                    ; Registrador:inst|Saida[9]   ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.408 ns                ;
+; N/A                                     ; 178.64 MHz ( period = 5.598 ns )                    ; Registrador:inst7|Saida[1]  ; Registrador:inst12|Saida[23] ; CLK        ; CLK      ; None                        ; None                      ; 5.407 ns                ;
+; N/A                                     ; 178.67 MHz ( period = 5.597 ns )                    ; Registrador:inst7|Saida[1]  ; Registrador:inst12|Saida[22] ; CLK        ; CLK      ; None                        ; None                      ; 5.406 ns                ;
+; N/A                                     ; 179.37 MHz ( period = 5.575 ns )                    ; Registrador:inst8|Saida[8]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.386 ns                ;
+; N/A                                     ; 179.40 MHz ( period = 5.574 ns )                    ; Registrador:inst8|Saida[8]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.385 ns                ;
+; N/A                                     ; 179.50 MHz ( period = 5.571 ns )                    ; Registrador:inst|Saida[7]   ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.375 ns                ;
+; N/A                                     ; 179.50 MHz ( period = 5.571 ns )                    ; Registrador:inst8|Saida[2]  ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.380 ns                ;
+; N/A                                     ; 179.53 MHz ( period = 5.570 ns )                    ; Registrador:inst7|Saida[4]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.372 ns                ;
+; N/A                                     ; 179.57 MHz ( period = 5.569 ns )                    ; Registrador:inst7|Saida[4]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.371 ns                ;
+; N/A                                     ; 179.63 MHz ( period = 5.567 ns )                    ; Registrador:inst|Saida[7]   ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.371 ns                ;
+; N/A                                     ; 179.63 MHz ( period = 5.567 ns )                    ; Registrador:inst8|Saida[2]  ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.376 ns                ;
+; N/A                                     ; 179.86 MHz ( period = 5.560 ns )                    ; Controler:inst15|ALUSrcA[1] ; Registrador:inst12|Saida[23] ; CLK        ; CLK      ; None                        ; None                      ; 5.365 ns                ;
+; N/A                                     ; 179.89 MHz ( period = 5.559 ns )                    ; Controler:inst15|ALUSrcA[1] ; Registrador:inst12|Saida[22] ; CLK        ; CLK      ; None                        ; None                      ; 5.364 ns                ;
+; N/A                                     ; 180.67 MHz ( period = 5.535 ns )                    ; Registrador:inst|Saida[5]   ; Registrador:inst12|Saida[23] ; CLK        ; CLK      ; None                        ; None                      ; 5.341 ns                ;
+; N/A                                     ; 180.70 MHz ( period = 5.534 ns )                    ; Registrador:inst|Saida[5]   ; Registrador:inst12|Saida[22] ; CLK        ; CLK      ; None                        ; None                      ; 5.340 ns                ;
+; N/A                                     ; 181.52 MHz ( period = 5.509 ns )                    ; Registrador:inst7|Saida[3]  ; Registrador:inst12|Saida[23] ; CLK        ; CLK      ; None                        ; None                      ; 5.315 ns                ;
+; N/A                                     ; 181.55 MHz ( period = 5.508 ns )                    ; Registrador:inst8|Saida[4]  ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.310 ns                ;
+; N/A                                     ; 181.55 MHz ( period = 5.508 ns )                    ; Registrador:inst7|Saida[3]  ; Registrador:inst12|Saida[22] ; CLK        ; CLK      ; None                        ; None                      ; 5.314 ns                ;
+; N/A                                     ; 181.69 MHz ( period = 5.504 ns )                    ; Registrador:inst8|Saida[4]  ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.306 ns                ;
+; N/A                                     ; 181.82 MHz ( period = 5.500 ns )                    ; Registrador:inst8|Saida[9]  ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.315 ns                ;
+; N/A                                     ; 181.92 MHz ( period = 5.497 ns )                    ; Registrador:inst8|Saida[9]  ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.312 ns                ;
+; N/A                                     ; 182.55 MHz ( period = 5.478 ns )                    ; Controler:inst15|ALUSrcB[0] ; Registrador:inst12|Saida[23] ; CLK        ; CLK      ; None                        ; None                      ; 5.283 ns                ;
+; N/A                                     ; 182.58 MHz ( period = 5.477 ns )                    ; Controler:inst15|ALUSrcB[0] ; Registrador:inst12|Saida[22] ; CLK        ; CLK      ; None                        ; None                      ; 5.282 ns                ;
+; N/A                                     ; 182.62 MHz ( period = 5.476 ns )                    ; Registrador:inst8|Saida[0]  ; Registrador:inst12|Saida[23] ; CLK        ; CLK      ; None                        ; None                      ; 5.285 ns                ;
+; N/A                                     ; 182.65 MHz ( period = 5.475 ns )                    ; Registrador:inst8|Saida[0]  ; Registrador:inst12|Saida[22] ; CLK        ; CLK      ; None                        ; None                      ; 5.284 ns                ;
+; N/A                                     ; 182.78 MHz ( period = 5.471 ns )                    ; Registrador:inst8|Saida[3]  ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.280 ns                ;
+; N/A                                     ; 182.92 MHz ( period = 5.467 ns )                    ; Registrador:inst7|Saida[5]  ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.271 ns                ;
+; N/A                                     ; 182.92 MHz ( period = 5.467 ns )                    ; Registrador:inst8|Saida[3]  ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.276 ns                ;
+; N/A                                     ; 183.05 MHz ( period = 5.463 ns )                    ; Registrador:inst7|Saida[5]  ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.267 ns                ;
+; N/A                                     ; 183.28 MHz ( period = 5.456 ns )                    ; Registrador:inst7|Saida[6]  ; Registrador:inst12|Saida[28] ; CLK        ; CLK      ; None                        ; None                      ; 5.260 ns                ;
+; N/A                                     ; 183.32 MHz ( period = 5.455 ns )                    ; Registrador:inst7|Saida[6]  ; Registrador:inst12|Saida[29] ; CLK        ; CLK      ; None                        ; None                      ; 5.259 ns                ;
+; N/A                                     ; 183.35 MHz ( period = 5.454 ns )                    ; Registrador:inst7|Saida[0]  ; Registrador:inst12|Saida[23] ; CLK        ; CLK      ; None                        ; None                      ; 5.257 ns                ;
+; N/A                                     ; 183.39 MHz ( period = 5.453 ns )                    ; Registrador:inst7|Saida[0]  ; Registrador:inst12|Saida[22] ; CLK        ; CLK      ; None                        ; None                      ; 5.256 ns                ;
+; N/A                                     ; 183.55 MHz ( period = 5.448 ns )                    ; Registrador:inst7|Saida[2]  ; Registrador:inst12|Saida[24] ; CLK        ; CLK      ; None                        ; None                      ; 5.272 ns                ;
+; N/A                                     ; 183.59 MHz ( period = 5.447 ns )                    ; Registrador:inst8|Saida[5]  ; Registrador:inst12|Saida[27] ; CLK        ; CLK      ; None                        ; None                      ; 5.256 ns                ;
+; N/A                                     ; 183.69 MHz ( period = 5.444 ns )                    ; Registrador:inst8|Saida[5]  ; Registrador:inst12|Saida[26] ; CLK        ; CLK      ; None                        ; None                      ; 5.253 ns                ;
+; N/A                                     ; 183.69 MHz ( period = 5.444 ns )                    ; Registrador:inst7|Saida[2]  ; Registrador:inst12|Saida[25] ; CLK        ; CLK      ; None                        ; None                      ; 5.268 ns                ;
+; N/A                                     ; 183.86 MHz ( period = 5.439 ns )                    ; Registrador:inst|Saida[0]   ; Registrador:inst12|Saida[23] ; CLK        ; CLK      ; None                        ; None                      ; 5.250 ns                ;
+; N/A                                     ; 183.89 MHz ( period = 5.438 ns )                    ; Registrador:inst|Saida[0]   ; Registrador:inst12|Saida[22] ; CLK        ; CLK      ; None                        ; None                      ; 5.249 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                             ;                              ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-----------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; tco                                                                                  ;
++-------+--------------+------------+----------------------------+--------+------------+
+; Slack ; Required tco ; Actual tco ; From                       ; To     ; From Clock ;
++-------+--------------+------------+----------------------------+--------+------------+
+; N/A   ; None         ; 7.003 ns   ; Registrador:inst|Saida[1]  ; PC[1]  ; CLK        ;
+; N/A   ; None         ; 6.960 ns   ; Registrador:inst|Saida[2]  ; PC[2]  ; CLK        ;
+; N/A   ; None         ; 6.767 ns   ; Registrador:inst|Saida[7]  ; PC[7]  ; CLK        ;
+; N/A   ; None         ; 6.580 ns   ; Registrador:inst|Saida[5]  ; PC[5]  ; CLK        ;
+; N/A   ; None         ; 6.569 ns   ; Registrador:inst|Saida[0]  ; PC[0]  ; CLK        ;
+; N/A   ; None         ; 6.535 ns   ; Registrador:inst|Saida[14] ; PC[14] ; CLK        ;
+; N/A   ; None         ; 6.525 ns   ; Registrador:inst|Saida[11] ; PC[11] ; CLK        ;
+; N/A   ; None         ; 6.423 ns   ; Registrador:inst|Saida[13] ; PC[13] ; CLK        ;
+; N/A   ; None         ; 6.418 ns   ; Registrador:inst|Saida[6]  ; PC[6]  ; CLK        ;
+; N/A   ; None         ; 6.358 ns   ; Registrador:inst|Saida[28] ; PC[28] ; CLK        ;
+; N/A   ; None         ; 6.356 ns   ; Registrador:inst|Saida[3]  ; PC[3]  ; CLK        ;
+; N/A   ; None         ; 6.320 ns   ; Registrador:inst|Saida[4]  ; PC[4]  ; CLK        ;
+; N/A   ; None         ; 6.314 ns   ; Registrador:inst|Saida[15] ; PC[15] ; CLK        ;
+; N/A   ; None         ; 6.286 ns   ; Registrador:inst|Saida[23] ; PC[23] ; CLK        ;
+; N/A   ; None         ; 6.273 ns   ; Registrador:inst|Saida[27] ; PC[27] ; CLK        ;
+; N/A   ; None         ; 6.231 ns   ; Registrador:inst|Saida[29] ; PC[29] ; CLK        ;
+; N/A   ; None         ; 6.215 ns   ; Registrador:inst|Saida[31] ; PC[31] ; CLK        ;
+; N/A   ; None         ; 6.200 ns   ; Registrador:inst|Saida[21] ; PC[21] ; CLK        ;
+; N/A   ; None         ; 6.143 ns   ; Registrador:inst|Saida[18] ; PC[18] ; CLK        ;
+; N/A   ; None         ; 6.105 ns   ; Registrador:inst|Saida[26] ; PC[26] ; CLK        ;
+; N/A   ; None         ; 6.074 ns   ; Registrador:inst|Saida[9]  ; PC[9]  ; CLK        ;
+; N/A   ; None         ; 6.054 ns   ; Registrador:inst|Saida[25] ; PC[25] ; CLK        ;
+; N/A   ; None         ; 6.004 ns   ; Registrador:inst|Saida[10] ; PC[10] ; CLK        ;
+; N/A   ; None         ; 5.982 ns   ; Registrador:inst|Saida[16] ; PC[16] ; CLK        ;
+; N/A   ; None         ; 5.981 ns   ; Registrador:inst|Saida[30] ; PC[30] ; CLK        ;
+; N/A   ; None         ; 5.911 ns   ; Registrador:inst|Saida[24] ; PC[24] ; CLK        ;
+; N/A   ; None         ; 5.903 ns   ; Registrador:inst|Saida[19] ; PC[19] ; CLK        ;
+; N/A   ; None         ; 5.823 ns   ; Registrador:inst|Saida[8]  ; PC[8]  ; CLK        ;
+; N/A   ; None         ; 5.773 ns   ; Registrador:inst|Saida[17] ; PC[17] ; CLK        ;
+; N/A   ; None         ; 5.745 ns   ; Registrador:inst|Saida[20] ; PC[20] ; CLK        ;
+; N/A   ; None         ; 5.701 ns   ; Registrador:inst|Saida[22] ; PC[22] ; CLK        ;
+; N/A   ; None         ; 5.622 ns   ; Registrador:inst|Saida[12] ; PC[12] ; CLK        ;
++-------+--------------+------------+----------------------------+--------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Thu May 09 12:57:55 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off HW -c HW --timing_analysis_only
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK" is an undefined clock
+Info: Clock "CLK" has Internal fmax of 146.54 MHz between source register "Registrador:inst|Saida[3]" and destination register "Registrador:inst12|Saida[31]" (period= 6.824 ns)
+    Info: + Longest register to register delay is 6.628 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X25_Y15_N9; Fanout = 9; REG Node = 'Registrador:inst|Saida[3]'
+        Info: 2: + IC(0.253 ns) + CELL(0.228 ns) = 0.481 ns; Loc. = LCCOMB_X25_Y15_N12; Fanout = 2; COMB Node = 'MuxUlaSourceA:inst9|Mux3~0'
+        Info: 3: + IC(0.541 ns) + CELL(0.378 ns) = 1.400 ns; Loc. = LCCOMB_X22_Y15_N12; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[3]~51'
+        Info: 4: + IC(0.370 ns) + CELL(0.053 ns) = 1.823 ns; Loc. = LCCOMB_X22_Y15_N24; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[5]~47'
+        Info: 5: + IC(0.308 ns) + CELL(0.053 ns) = 2.184 ns; Loc. = LCCOMB_X22_Y15_N20; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[7]~43'
+        Info: 6: + IC(0.205 ns) + CELL(0.053 ns) = 2.442 ns; Loc. = LCCOMB_X22_Y15_N16; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[9]~39'
+        Info: 7: + IC(0.312 ns) + CELL(0.053 ns) = 2.807 ns; Loc. = LCCOMB_X21_Y15_N8; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[11]~35'
+        Info: 8: + IC(0.567 ns) + CELL(0.053 ns) = 3.427 ns; Loc. = LCCOMB_X21_Y17_N24; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[13]~31'
+        Info: 9: + IC(0.304 ns) + CELL(0.053 ns) = 3.784 ns; Loc. = LCCOMB_X21_Y17_N4; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[15]~27'
+        Info: 10: + IC(0.210 ns) + CELL(0.053 ns) = 4.047 ns; Loc. = LCCOMB_X21_Y17_N16; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[17]~23'
+        Info: 11: + IC(0.233 ns) + CELL(0.053 ns) = 4.333 ns; Loc. = LCCOMB_X21_Y17_N12; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[19]~19'
+        Info: 12: + IC(0.374 ns) + CELL(0.053 ns) = 4.760 ns; Loc. = LCCOMB_X21_Y17_N8; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[21]~15'
+        Info: 13: + IC(0.491 ns) + CELL(0.053 ns) = 5.304 ns; Loc. = LCCOMB_X22_Y17_N24; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[23]~11'
+        Info: 14: + IC(0.313 ns) + CELL(0.053 ns) = 5.670 ns; Loc. = LCCOMB_X22_Y17_N20; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[25]~7'
+        Info: 15: + IC(0.215 ns) + CELL(0.053 ns) = 5.938 ns; Loc. = LCCOMB_X22_Y17_N16; Fanout = 3; COMB Node = 'Ula32:inst11|carry_temp[27]~3'
+        Info: 16: + IC(0.219 ns) + CELL(0.053 ns) = 6.210 ns; Loc. = LCCOMB_X22_Y17_N14; Fanout = 2; COMB Node = 'Ula32:inst11|carry_temp[29]~1'
+        Info: 17: + IC(0.210 ns) + CELL(0.053 ns) = 6.473 ns; Loc. = LCCOMB_X22_Y17_N0; Fanout = 1; COMB Node = 'Ula32:inst11|soma_temp[31]'
+        Info: 18: + IC(0.000 ns) + CELL(0.155 ns) = 6.628 ns; Loc. = LCFF_X22_Y17_N1; Fanout = 33; REG Node = 'Registrador:inst12|Saida[31]'
+        Info: Total cell delay = 1.503 ns ( 22.68 % )
+        Info: Total interconnect delay = 5.125 ns ( 77.32 % )
+    Info: - Smallest clock skew is -0.012 ns
+        Info: + Shortest clock path from clock "CLK" to destination register is 2.471 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+            Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 1307; COMB Node = 'CLK~clkctrl'
+            Info: 3: + IC(0.656 ns) + CELL(0.618 ns) = 2.471 ns; Loc. = LCFF_X22_Y17_N1; Fanout = 33; REG Node = 'Registrador:inst12|Saida[31]'
+            Info: Total cell delay = 1.472 ns ( 59.57 % )
+            Info: Total interconnect delay = 0.999 ns ( 40.43 % )
+        Info: - Longest clock path from clock "CLK" to source register is 2.483 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+            Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 1307; COMB Node = 'CLK~clkctrl'
+            Info: 3: + IC(0.668 ns) + CELL(0.618 ns) = 2.483 ns; Loc. = LCFF_X25_Y15_N9; Fanout = 9; REG Node = 'Registrador:inst|Saida[3]'
+            Info: Total cell delay = 1.472 ns ( 59.28 % )
+            Info: Total interconnect delay = 1.011 ns ( 40.72 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Micro setup delay of destination is 0.090 ns
+Info: tco from clock "CLK" to destination pin "PC[1]" through register "Registrador:inst|Saida[1]" is 7.003 ns
+    Info: + Longest clock path from clock "CLK" to source register is 2.478 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 1307; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.663 ns) + CELL(0.618 ns) = 2.478 ns; Loc. = LCFF_X22_Y15_N3; Fanout = 11; REG Node = 'Registrador:inst|Saida[1]'
+        Info: Total cell delay = 1.472 ns ( 59.40 % )
+        Info: Total interconnect delay = 1.006 ns ( 40.60 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Longest register to pin delay is 4.431 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X22_Y15_N3; Fanout = 11; REG Node = 'Registrador:inst|Saida[1]'
+        Info: 2: + IC(2.287 ns) + CELL(2.144 ns) = 4.431 ns; Loc. = PIN_P20; Fanout = 0; PIN Node = 'PC[1]'
+        Info: Total cell delay = 2.144 ns ( 48.39 % )
+        Info: Total interconnect delay = 2.287 ns ( 51.61 % )
+Info: Quartus II 64-Bit Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4395 megabytes
+    Info: Processing ended: Thu May 09 12:57:55 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
