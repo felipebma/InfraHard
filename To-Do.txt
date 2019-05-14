@@ -1,0 +1,12 @@
+TO-DO:
+
+- Branches
+- Aritiméticas
+- Stores & Loads
+- Mult - Div
+- Jumps
+- Inc - Dec
+
+DO:
+
+- Add
