@@ -37979,10 +37979,10 @@ VECTOR("C:/Users/wfmf/Desktop/Final Project 1.0/TestCPU.vwf")
 VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 500000;
+		ZBEGIN = 138106;
+		ZEND = 230340;
 		NUMERATOR = 763;
-		DENOMINATOR = 500000;
+		DENOMINATOR = 92234;
 		TOP_INDEX = 0;
 	}
 	CLOCK{

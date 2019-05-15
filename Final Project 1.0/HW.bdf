@@ -1016,6 +1016,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
+<<<<<<< HEAD
 	(rect 1752 944 1896 1072)
 	(text "Mult" (rect 5 0 25 12)(font "Arial" ))
 	(text "inst14" (rect 8 112 37 124)(font "Arial" ))
@@ -1070,6 +1071,27 @@ applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 128 112)(line_width 1))
+=======
+	(rect 1336 728 1512 824)
+	(text "Extensor16_32" (rect 5 0 78 12)(font "Arial" ))
+	(text "inst14" (rect 8 80 37 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Input[15..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "Input[15..0]" (rect 21 27 77 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "Output[31..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "Output[31..0]" (rect 91 27 155 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 160 80)(line_width 1))
+>>>>>>> fd1beb48d902cc3a8f9d0f1671a455cd39a2b0a7
 	)
 )
 (connector
@@ -1250,11 +1272,6 @@ applicable agreement for further details.
 (connector
 	(pt 1280 552)
 	(pt 1040 552)
-	(bus)
-)
-(connector
-	(pt 1280 760)
-	(pt 1280 552)
 	(bus)
 )
 (connector
@@ -1930,6 +1947,7 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
+<<<<<<< HEAD
 	(pt 2288 968)
 	(pt 2272 968)
 )
@@ -1984,6 +2002,41 @@ applicable agreement for further details.
 (connector
 	(pt 2160 760)
 	(pt 1584 760)
+=======
+	(pt 1280 552)
+	(pt 1280 760)
+	(bus)
+)
+(connector
+	(pt 1280 760)
+	(pt 1336 760)
+	(bus)
+)
+(connector
+	(pt 1512 760)
+	(pt 1552 760)
+	(bus)
+)
+(connector
+	(pt 1552 728)
+	(pt 1552 760)
+	(bus)
+)
+(connector
+	(pt 1552 728)
+	(pt 1832 728)
+	(bus)
+)
+(connector
+	(pt 1832 728)
+	(pt 1832 616)
+	(bus)
+)
+(connector
+	(pt 1832 616)
+	(pt 1880 616)
+	(bus)
+>>>>>>> fd1beb48d902cc3a8f9d0f1671a455cd39a2b0a7
 )
 (junction (pt 2304 480))
 (junction (pt 2576 432))
