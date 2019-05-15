@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 216 304)
+	(rect 16 16 216 336)
 	(text "Controler" (rect 5 0 49 12)(font "Arial" ))
-	(text "inst" (rect 8 272 25 284)(font "Arial" ))
+	(text "inst" (rect 8 304 25 316)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -149,7 +149,21 @@ applicable agreement for further details.
 		(text "BWrite" (rect 146 251 179 263)(font "Arial" ))
 		(line (pt 200 256)(pt 184 256)(line_width 1))
 	)
+	(port
+		(pt 200 272)
+		(output)
+		(text "MultCtrl" (rect 0 0 37 12)(font "Arial" ))
+		(text "MultCtrl" (rect 142 267 179 279)(font "Arial" ))
+		(line (pt 200 272)(pt 184 272)(line_width 1))
+	)
+	(port
+		(pt 200 288)
+		(output)
+		(text "DivCtrl" (rect 0 0 35 12)(font "Arial" ))
+		(text "DivCtrl" (rect 144 283 179 295)(font "Arial" ))
+		(line (pt 200 288)(pt 184 288)(line_width 1))
+	)
 	(drawing
-		(rectangle (rect 16 16 184 272)(line_width 1))
+		(rectangle (rect 16 16 184 304)(line_width 1))
 	)
 )

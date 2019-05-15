@@ -1,8 +1,8 @@
-module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite,PCSrc,ALUop,ALUSrcA,ALUSrcB,RegWrite,RegDst,ALUout,AWrite,BWrite);
+module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite,PCSrc,ALUop,ALUSrcA,ALUSrcB,RegWrite,RegDst,ALUout,AWrite,BWrite,MultCtrl,DivCtrl);
 	input wire [5:0] opcode,func;
 	input wire clock;
 	reg [5:0] Fetch,Wait1,InstRead,Wait2,OpcodeRead,WriteRegALU,ResetS;
-	output reg Reset,PCWrite,MemWrite,IRWrite,RegWrite,ALUout,AWrite,BWrite;
+	output reg Reset,PCWrite,MemWrite,IRWrite,RegWrite,ALUout,AWrite,BWrite,MultCtrl,DivCtrl;
 	output reg [1:0] ALUSrcA,RegDst;
 	output reg [2:0] IorD,PCSrc,ALUop,ALUSrcB;
 	output reg [3:0] MemToReg;

@@ -1,4 +1,4 @@
-module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite,PCSrc,ALUop,ALUSrcA,ALUSrcB,RegWrite,RegDst,ALUout,AWrite,BWrite);
+module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite,PCSrc,ALUop,ALUSrcA,ALUSrcB,RegWrite,RegDst,ALUout,AWrite,BWrite,MultCtrl,DivCtrl);
 	input wire [5:0] opcode,func;
 	input wire clock;
 	reg [5:0] Fetch,Wait1,InstRead,Wait2,OpcodeRead,WriteRegALU,ResetS;
@@ -60,8 +60,8 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				PCWrite <= 1'b0;
 				MemWrite <= 1'b0;
 				IRWrite <= 1'b1;
-				AWrite <= 1'b1;
-				BWrite <= 1'b1;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				
@@ -71,14 +71,14 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				PCWrite <= 1'b0;
 				MemWrite <= 1'b0;
 				IRWrite <= 1'b0;
-				AWrite <= 1'b0;
-				BWrite <= 1'b0;
+				AWrite <= 1'b1;
+				BWrite <= 1'b1;
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				
 				Estado <= OpcodeRead;			
 			end
-			WriteRegALU: begin
+			WriteRegALU: begin //Carrea info do ALUout no Registrador
 				PCWrite <= 1'b0;
 				MemWrite <= 1'b0;
 				IRWrite <= 1'b0;
@@ -95,7 +95,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				case(opcode)
 					6'd0: begin
 						case(func)
-							6'b100000: begin //Add
+							6'b100000: begin //Add e salva no ALUout
 								PCWrite <= 1'b0;
 								MemWrite <= 1'b0;
 								IRWrite <= 1'b0;
