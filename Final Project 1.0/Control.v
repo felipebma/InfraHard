@@ -8,6 +8,33 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 	output reg [2:0] IorD,PCSrc,ALUop,ALUSrcB;
 	output reg [3:0] MemToReg;
 	reg [5:0] Estado;
+	
+	//OpCodes
+	ADDI = 6'd8, ADDIU = 6'd9
+	
+	
+	// Funções
+	ADD = 6'b100000, SUB = 6'b100010, AND = 6'b100100
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	initial begin 
 		Estado <= 6'd0;
 		ResetS <= 6'd0;
@@ -110,7 +137,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				case(opcode)
 					6'd0: begin
 						case(func)
-							6'b100000: begin //Add e salva no ALUout
+							ADD: begin //Add e salva no ALUout
 								PCWrite <= 1'b0;
 								MemWrite <= 1'b0;
 								IRWrite <= 1'b0;
@@ -124,7 +151,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								ALUSrcB <= 3'b000;
 								Estado <= WriteRegALU;
 							end
-							6'b100010: begin //Sub e salva no ALUout
+							SUB: begin //Sub e salva no ALUout
 								PCWrite <= 1'b0;
 								MemWrite <= 1'b0;
 								IRWrite <= 1'b0;
@@ -138,7 +165,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								ALUSrcB <= 3'b000;
 								Estado <= WriteRegALU;
 							end
-							6'b100100: begin //And e salva no ALUout
+							AND: begin //And e salva no ALUout
 								PCWrite <= 1'b0;
 								MemWrite <= 1'b0;
 								IRWrite <= 1'b0;
@@ -154,7 +181,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 							end
 						endcase
 					end
-					6'd8: begin //Addi e salva em ALUout
+					ADDI: begin //Addi e salva em ALUout
 						PCWrite <= 1'b0;
 						MemWrite <= 1'b0;
 						IRWrite <= 1'b0;
@@ -169,7 +196,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						ALUSrcB <= 3'b010;
 						Estado <= WriteRegALU2;
 					end
-					6'd9: begin //Addiu e salva em ALUout
+					ADDIU: begin //Addiu e salva em ALUout
 						PCWrite <= 1'b0;
 						MemWrite <= 1'b0;
 						IRWrite <= 1'b0;
