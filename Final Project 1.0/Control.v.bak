@@ -1,28 +1,30 @@
 module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite,PCSrc,ALUop,ALUSrcA,
 	ALUSrcB,RegWrite,RegDst,ALUout,AWrite,BWrite,MultCtrl,DivCtrl,MDRMux,MDRWrite,StoreControl,
-	PCWriteCond,ALUcond);
+	PCWriteCond,ALUcond,Shift,RDn,RDx);
 	
 	input wire [5:0] opcode,func;
 	input wire clock;
 	output reg Reset,PCWrite,MemWrite,IRWrite,RegWrite,ALUout,AWrite,BWrite,MultCtrl,DivCtrl,MDRWrite,
-	PCWriteCond;
+	PCWriteCond,RDn,RDx;
 	
 	output reg [1:0] ALUSrcA,RegDst,MDRMux,StoreControl,ALUcond;
-	output reg [2:0] IorD,PCSrc,ALUop,ALUSrcB;
+	output reg [2:0] IorD,PCSrc,ALUop,ALUSrcB,Shift;
 	output reg [3:0] MemToReg;
 	reg [6:0] Estado;
 	
 	//Estados
 	reg [6:0] Fetch,Wait1,InstRead,Branch,OpcodeRead,WriteRegALU,WriteRegALU2,ResetS,CarregaByteMDR,
 	EscreveMDRemRegistrador,Wait3,SolicitaDado1,SolicitaDado2,Wait4,CarregaWordMDR,SolicitaDado3,Wait5,
-	CarregaHalfWordMDR,EscreveMemoriaByte,EscreveMemoriaHalfWord,EscreveMemoriaWord;
+	CarregaHalfWordMDR,EscreveMemoriaByte,EscreveMemoriaHalfWord,EscreveMemoriaWord,WriteRegRD,Shift1,
+	Shift2,Shift3,CarregaRDnoReg;
 	//OpCodes
 	reg [5:0] ADDI = 6'd8, ADDIU = 6'd9, LB = 6'd32, LW = 6'd35, LH = 6'd33,SB = 6'd40, SH = 6'd41,
-	SW = 6'd43, BEQ = 6'd4;
+	SW = 6'd43, BEQ = 6'd4, BNE = 6'd5, BLE = 6'd6, BGT = 6'd7;
 	
 	
 	// Funções
-	reg [5:0] ADD = 6'b100000, SUB = 6'b100010, AND = 6'b100100;
+	reg [5:0] ADD = 6'b100000, SUB = 6'b100010, AND = 6'b100100,SLL = 6'd0,SLLV = 6'd4,SRA = 6'd3,
+	SRAV = 6'd7,SRL = 6'd2;
 	
 	
 	
@@ -66,6 +68,11 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 		EscreveMemoriaByte <= 7'd18;
 		EscreveMemoriaHalfWord <= 7'd19;
 		EscreveMemoriaWord <= 7'd20;
+		WriteRegRD <= 7'd21;
+		Shift1 <= 7'd22;
+		Shift2 <= 7'd23;
+		Shift3 <= 7'd24;
+		CarregaRDnoReg <= 7'd25;
 	end
 		
 	always @(posedge clock) begin
@@ -351,6 +358,76 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				StoreControl <= 2'b00;
 				Estado <= Fetch;
 			end
+			WriteRegRD: begin // Escreve no Registrador o valor entregue por RD
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
+				
+				Estado <= CarregaRDnoReg;
+			end
+			CarregaRDnoReg:begin
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b1;
+				ALUout <= 1'b0;
+				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
+				
+				MemToReg <= 4'b0010;
+				RegDst <= 2'b11;
+				Estado <= Fetch;
+			end
+			Shift1: begin //Shift Left n vezes
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
+				
+				Shift <= 3'b010;
+				Estado <= WriteRegRD;
+			end
+			Shift2: begin //Shift Rigth aritimetico n vezes
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
+				
+				Shift <= 3'b100;
+				Estado <= WriteRegRD;
+			end
+			Shift3: begin //Shift Rigth Logico n vezes
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
+				
+				Shift <= 3'b011;
+				Estado <= WriteRegRD;
+			end
 			OpcodeRead: begin
 				case(opcode)
 					6'd0: begin
@@ -402,6 +479,86 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								ALUSrcA <= 2'b10;
 								ALUSrcB <= 3'b000;
 								Estado <= WriteRegALU;
+							end
+							SLL: begin
+								PCWrite <= 1'b0;
+								MemWrite <= 1'b0;
+								IRWrite <= 1'b0;
+								AWrite <= 1'b0;
+								BWrite <= 1'b0;
+								RegWrite <= 1'b0;
+								ALUout <= 1'b0;
+								MDRWrite <= 1'b0;
+								PCWriteCond <= 1'b0;
+								
+								RDn <= 1'b1;
+								RDx <= 1'b0;
+								Shift <= 3'b001;
+								Estado <= Shift1;
+							end
+							SLLV: begin
+								PCWrite <= 1'b0;
+								MemWrite <= 1'b0;
+								IRWrite <= 1'b0;
+								AWrite <= 1'b0;
+								BWrite <= 1'b0;
+								RegWrite <= 1'b0;
+								ALUout <= 1'b0;
+								MDRWrite <= 1'b0;
+								PCWriteCond <= 1'b0;
+								
+								RDn <= 1'b0;
+								RDx <= 1'b1;
+								Shift <= 3'b001;
+								Estado <= Shift1;
+							end
+							SRA: begin
+								PCWrite <= 1'b0;
+								MemWrite <= 1'b0;
+								IRWrite <= 1'b0;
+								AWrite <= 1'b0;
+								BWrite <= 1'b0;
+								RegWrite <= 1'b0;
+								ALUout <= 1'b0;
+								MDRWrite <= 1'b0;
+								PCWriteCond <= 1'b0;
+								
+								RDn <= 1'b1;
+								RDx <= 1'b0;
+								Shift <= 3'b001;
+								Estado <= Shift2;
+							end
+							SRAV: begin
+								PCWrite <= 1'b0;
+								MemWrite <= 1'b0;
+								IRWrite <= 1'b0;
+								AWrite <= 1'b0;
+								BWrite <= 1'b0;
+								RegWrite <= 1'b0;
+								ALUout <= 1'b0;
+								MDRWrite <= 1'b0;
+								PCWriteCond <= 1'b0;
+								
+								RDn <= 1'b0;
+								RDx <= 1'b1;
+								Shift <= 3'b001;
+								Estado <= Shift2;
+							end
+							SRL: begin
+								PCWrite <= 1'b0;
+								MemWrite <= 1'b0;
+								IRWrite <= 1'b0;
+								AWrite <= 1'b0;
+								BWrite <= 1'b0;
+								RegWrite <= 1'b0;
+								ALUout <= 1'b0;
+								MDRWrite <= 1'b0;
+								PCWriteCond <= 1'b0;
+								
+								RDn <= 1'b1;
+								RDx <= 1'b0;
+								Shift <= 3'b001;
+								Estado <= Shift3;
 							end
 						endcase
 					end

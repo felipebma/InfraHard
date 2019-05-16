@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 216 432)
+	(rect 16 16 216 464)
 	(text "Controler" (rect 5 0 49 12)(font "Arial" ))
-	(text "inst" (rect 8 400 25 412)(font "Arial" ))
+	(text "inst" (rect 8 432 25 444)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -198,7 +198,28 @@ applicable agreement for further details.
 		(text "ALUcond[1..0]" (rect 109 363 179 375)(font "Arial" ))
 		(line (pt 200 368)(pt 184 368)(line_width 3))
 	)
+	(port
+		(pt 200 384)
+		(output)
+		(text "Shift[2..0]" (rect 0 0 49 12)(font "Arial" ))
+		(text "Shift[2..0]" (rect 130 379 179 391)(font "Arial" ))
+		(line (pt 200 384)(pt 184 384)(line_width 3))
+	)
+	(port
+		(pt 200 400)
+		(output)
+		(text "RDn" (rect 0 0 22 12)(font "Arial" ))
+		(text "RDn" (rect 157 395 179 407)(font "Arial" ))
+		(line (pt 200 400)(pt 184 400)(line_width 1))
+	)
+	(port
+		(pt 200 416)
+		(output)
+		(text "RDx" (rect 0 0 22 12)(font "Arial" ))
+		(text "RDx" (rect 157 411 179 423)(font "Arial" ))
+		(line (pt 200 416)(pt 184 416)(line_width 1))
+	)
 	(drawing
-		(rectangle (rect 16 16 184 400)(line_width 1))
+		(rectangle (rect 16 16 184 432)(line_width 1))
 	)
 )

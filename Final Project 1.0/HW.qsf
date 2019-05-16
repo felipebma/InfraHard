@@ -87,4 +87,10 @@ set_global_assignment -name MIF_FILE BEQ.mif
 set_global_assignment -name MIF_FILE BNE.mif
 set_global_assignment -name MIF_FILE BLE.mif
 set_global_assignment -name MIF_FILE BGT.mif
+set_global_assignment -name VERILOG_FILE MuxRDx.v
+set_global_assignment -name VERILOG_FILE MuxRDn.v
+set_global_assignment -name MIF_FILE SLLV.mif
+set_global_assignment -name MIF_FILE SRA.mif
+set_global_assignment -name MIF_FILE SRAV.mif
+set_global_assignment -name MIF_FILE SRL.mif
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
