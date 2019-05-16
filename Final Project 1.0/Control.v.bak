@@ -16,7 +16,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 	reg [6:0] Fetch,Wait1,InstRead,Branch,OpcodeRead,WriteRegALU,WriteRegALU2,ResetS,CarregaByteMDR,
 	EscreveMDRemRegistrador,Wait3,SolicitaDado1,SolicitaDado2,Wait4,CarregaWordMDR,SolicitaDado3,Wait5,
 	CarregaHalfWordMDR,EscreveMemoriaByte,EscreveMemoriaHalfWord,EscreveMemoriaWord,WriteRegRD,Shift1,
-	Shift2,Shift3,CarregaRDnoReg;
+	Shift2,Shift3,SolicitaDado4,Wait6;
 	//OpCodes
 	reg [5:0] ADDI = 6'd8, ADDIU = 6'd9, LB = 6'd32, LW = 6'd35, LH = 6'd33,SB = 6'd40, SH = 6'd41,
 	SW = 6'd43, BEQ = 6'd4, BNE = 6'd5, BLE = 6'd6, BGT = 6'd7;
@@ -72,7 +72,10 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 		Shift1 <= 7'd22;
 		Shift2 <= 7'd23;
 		Shift3 <= 7'd24;
-		CarregaRDnoReg <= 7'd25;
+		SolicitaDado4 <= 7'd25;
+		Wait6 <= 7'd26;
+		SolicitaDado5 <= 7'd27;
+		Wait7 <= 7'd28;
 	end
 		
 	always @(posedge clock) begin
@@ -328,6 +331,33 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				StoreControl <= 2'b10;
 				Estado <= Fetch;
 			end
+			SolicitaDado5: begin
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
+				
+				IorD <= 3'b101;
+				Estado <= Wait7;
+			end
+			Wait7: begin
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
+				
+				Estado <= EscreveMemoriaByte;
+			end
 			EscreveMemoriaHalfWord: begin // Memory[ALUout] <= halfWord[B]
 				PCWrite <= 1'b0;
 				MemWrite <= 1'b1;
@@ -342,6 +372,33 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				IorD <= 3'b101;
 				StoreControl <= 2'b01;
 				Estado <= Fetch;
+			end
+			SolicitaDado4: begin
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
+				
+				IorD <= 3'b101;
+				Estado <= Wait6;
+			end
+			Wait6: begin
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
+				
+				Estado <= EscreveMemoriaHalfWord;
 			end
 			EscreveMemoriaWord: begin // Memory[ALUout] <= word[B]
 				PCWrite <= 1'b0;
@@ -359,19 +416,6 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				Estado <= Fetch;
 			end
 			WriteRegRD: begin // Escreve no Registrador o valor entregue por RD
-				PCWrite <= 1'b0;
-				MemWrite <= 1'b0;
-				IRWrite <= 1'b0;
-				AWrite <= 1'b0;
-				BWrite <= 1'b0;
-				RegWrite <= 1'b0;
-				ALUout <= 1'b0;
-				MDRWrite <= 1'b0;
-				PCWriteCond <= 1'b0;
-				
-				Estado <= CarregaRDnoReg;
-			end
-			CarregaRDnoReg:begin
 				PCWrite <= 1'b0;
 				MemWrite <= 1'b0;
 				IRWrite <= 1'b0;
@@ -480,7 +524,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								ALUSrcB <= 3'b000;
 								Estado <= WriteRegALU;
 							end
-							SLL: begin
+							SLL: begin //Carrega dados no RD
 								PCWrite <= 1'b0;
 								MemWrite <= 1'b0;
 								IRWrite <= 1'b0;
@@ -496,7 +540,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								Shift <= 3'b001;
 								Estado <= Shift1;
 							end
-							SLLV: begin
+							SLLV: begin //Carrega dados no RD
 								PCWrite <= 1'b0;
 								MemWrite <= 1'b0;
 								IRWrite <= 1'b0;
@@ -512,7 +556,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								Shift <= 3'b001;
 								Estado <= Shift1;
 							end
-							SRA: begin
+							SRA: begin //Carrega dados no RD
 								PCWrite <= 1'b0;
 								MemWrite <= 1'b0;
 								IRWrite <= 1'b0;
@@ -528,7 +572,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								Shift <= 3'b001;
 								Estado <= Shift2;
 							end
-							SRAV: begin
+							SRAV: begin //Carrega dados no RD
 								PCWrite <= 1'b0;
 								MemWrite <= 1'b0;
 								IRWrite <= 1'b0;
@@ -544,7 +588,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								Shift <= 3'b001;
 								Estado <= Shift2;
 							end
-							SRL: begin
+							SRL: begin //Carrega dados no RD
 								PCWrite <= 1'b0;
 								MemWrite <= 1'b0;
 								IRWrite <= 1'b0;
@@ -661,7 +705,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						ALUop <= 3'b001;
 						ALUSrcA <= 2'b10;
 						ALUSrcB <= 3'b010;
-						Estado <= EscreveMemoriaByte;
+						Estado <= SolicitaDado5;
 					end
 					SH: begin //Offset + RS
 						PCWrite <= 1'b0;
@@ -678,7 +722,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						ALUop <= 3'b001;
 						ALUSrcA <= 2'b10;
 						ALUSrcB <= 3'b010;
-						Estado <= EscreveMemoriaHalfWord;
+						Estado <= SolicitaDado4;
 					end
 					SW: begin //Offset + RS
 						PCWrite <= 1'b0;

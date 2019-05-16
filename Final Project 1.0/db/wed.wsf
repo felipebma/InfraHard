@@ -46718,8 +46718,8 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/TestCPU.
 VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 338127;
-		ZEND = 416174;
+		ZBEGIN = 0;
+		ZEND = 78047;
 		NUMERATOR = 563;
 		DENOMINATOR = 59540;
 		TOP_INDEX = 0;

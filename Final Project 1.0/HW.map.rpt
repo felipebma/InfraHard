@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HW
-Thu May 16 19:32:56 2019
+Thu May 16 20:47:52 2019
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -20,10 +20,10 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  12. General Register Statistics
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated
- 16. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated
- 17. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated
- 18. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated
+ 15. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated
+ 16. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated
+ 17. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated
+ 18. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated
  19. Parameter Settings for User Entity Instance: Memoria:inst2|LPM_RAM_DQ:MEM
  20. Parameter Settings for User Entity Instance: Memoria:inst2|LPM_RAM_DQ:MEM_plus_One
  21. Parameter Settings for User Entity Instance: Memoria:inst2|LPM_RAM_DQ:MEM_plus_Two
@@ -54,15 +54,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Thu May 16 19:32:56 2019        ;
+; Analysis & Synthesis Status   ; Successful - Thu May 16 20:47:52 2019        ;
 ; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                 ; HW                                           ;
 ; Top-level Entity Name         ; HW                                           ;
 ; Family                        ; Stratix II                                   ;
 ; Logic utilization             ; N/A                                          ;
-;     Combinational ALUTs       ; 1,600                                        ;
-;     Dedicated logic registers ; 1,303                                        ;
-; Total registers               ; 1303                                         ;
+;     Combinational ALUTs       ; 1,642                                        ;
+;     Dedicated logic registers ; 1,307                                        ;
+; Total registers               ; 1307                                         ;
 ; Total pins                    ; 161                                          ;
 ; Total virtual pins            ; 0                                            ;
 ; Total block memory bits       ; 8,192                                        ;
@@ -186,14 +186,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; MUXMDR.v                         ; yes             ; User Verilog HDL File              ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/MUXMDR.v               ;
 ; Extensor8_32.v                   ; yes             ; User Verilog HDL File              ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/Extensor8_32.v         ;
 ; StoreControl.v                   ; yes             ; User Verilog HDL File              ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/StoreControl.v         ;
+; SB.mif                           ; yes             ; User Memory Initialization File    ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/SB.mif                 ;
 ; MuxALUcond.v                     ; yes             ; User Verilog HDL File              ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/MuxALUcond.v           ;
 ; MuxRDx.v                         ; yes             ; User Verilog HDL File              ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/MuxRDx.v               ;
 ; MuxRDn.v                         ; yes             ; User Verilog HDL File              ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/MuxRDn.v               ;
-; SRL.mif                          ; yes             ; User Memory Initialization File    ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/SRL.mif                ;
 ; lpm_ram_dq.tdf                   ; yes             ; Megafunction                       ; c:/program files/quartus/quartus/libraries/megafunctions/lpm_ram_dq.tdf                ;
 ; altram.tdf                       ; yes             ; Megafunction                       ; c:/program files/quartus/quartus/libraries/megafunctions/altram.tdf                    ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/program files/quartus/quartus/libraries/megafunctions/altsyncram.tdf                ;
-; db/altsyncram_ia91.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/altsyncram_ia91.tdf ;
+; db/altsyncram_m691.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/altsyncram_m691.tdf ;
 ; extensor16_32.v                  ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/extensor16_32.v        ;
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+
 
@@ -203,39 +203,39 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+-------+
 ; Resource                                      ; Usage ;
 +-----------------------------------------------+-------+
-; Estimated ALUTs Used                          ; 1600  ;
-; Dedicated logic registers                     ; 1303  ;
+; Estimated ALUTs Used                          ; 1642  ;
+; Dedicated logic registers                     ; 1307  ;
 ;                                               ;       ;
-; Estimated ALUTs Unavailable                   ; 217   ;
+; Estimated ALUTs Unavailable                   ; 212   ;
 ;                                               ;       ;
-; Total combinational functions                 ; 1600  ;
+; Total combinational functions                 ; 1642  ;
 ; Combinational ALUT usage by number of inputs  ;       ;
-;     -- 7 input functions                      ; 39    ;
-;     -- 6 input functions                      ; 886   ;
-;     -- 5 input functions                      ; 241   ;
-;     -- 4 input functions                      ; 80    ;
-;     -- <=3 input functions                    ; 354   ;
+;     -- 7 input functions                      ; 38    ;
+;     -- 6 input functions                      ; 885   ;
+;     -- 5 input functions                      ; 252   ;
+;     -- 4 input functions                      ; 100   ;
+;     -- <=3 input functions                    ; 367   ;
 ;                                               ;       ;
 ; Combinational ALUTs by mode                   ;       ;
-;     -- normal mode                            ; 1538  ;
-;     -- extended LUT mode                      ; 39    ;
+;     -- normal mode                            ; 1581  ;
+;     -- extended LUT mode                      ; 38    ;
 ;     -- arithmetic mode                        ; 23    ;
 ;     -- shared arithmetic mode                 ; 0     ;
 ;                                               ;       ;
-; Estimated ALUT/register pairs used            ; 2674  ;
+; Estimated ALUT/register pairs used            ; 2692  ;
 ;                                               ;       ;
-; Total registers                               ; 1303  ;
-;     -- Dedicated logic registers              ; 1303  ;
+; Total registers                               ; 1307  ;
+;     -- Dedicated logic registers              ; 1307  ;
 ;     -- I/O registers                          ; 0     ;
 ;                                               ;       ;
-; Estimated ALMs:  partially or completely used ; 1,337 ;
+; Estimated ALMs:  partially or completely used ; 1,346 ;
 ;                                               ;       ;
 ; I/O pins                                      ; 161   ;
 ; Total block memory bits                       ; 8192  ;
 ; Maximum fan-out node                          ; CLK   ;
-; Maximum fan-out                               ; 1335  ;
-; Total fan-out                                 ; 13905 ;
-; Average fan-out                               ; 4.49  ;
+; Maximum fan-out                               ; 1339  ;
+; Total fan-out                                 ; 14078 ;
+; Average fan-out                               ; 4.48  ;
 +-----------------------------------------------+-------+
 
 
@@ -244,9 +244,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
-; |HW                                             ; 1600 (4)          ; 1303 (0)     ; 8192              ; 0            ; 0       ; 0         ; 0         ; 161  ; 0            ; |HW                                                                                                         ; work         ;
+; |HW                                             ; 1642 (4)          ; 1307 (0)     ; 8192              ; 0            ; 0       ; 0         ; 0         ; 161  ; 0            ; |HW                                                                                                         ; work         ;
 ;    |Banco_reg:inst6|                            ; 738 (738)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Banco_reg:inst6                                                                                         ; work         ;
-;    |Controler:inst31|                           ; 90 (90)           ; 55 (55)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Controler:inst31                                                                                        ; work         ;
+;    |Controler:inst31|                           ; 108 (108)         ; 59 (59)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Controler:inst31                                                                                        ; work         ;
 ;    |Instr_Reg:inst3|                            ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Instr_Reg:inst3                                                                                         ; work         ;
 ;    |MUXIorD:inst1|                              ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MUXIorD:inst1                                                                                           ; work         ;
 ;    |MUXMDR:inst16|                              ; 57 (57)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MUXMDR:inst16                                                                                           ; work         ;
@@ -255,185 +255,189 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |MUXUlaSourceB:inst13|                       ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MUXUlaSourceB:inst13                                                                                    ; work         ;
 ;    |Memoria:inst2|                              ; 23 (23)           ; 0 (0)        ; 8192              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2                                                                                           ;              ;
 ;       |lpm_ram_dq:MEM_plus_One|                 ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
-;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ;              ;
-;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block                                  ; work         ;
-;                |altsyncram_ia91:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated   ;              ;
-;       |lpm_ram_dq:MEM_plus_Three|               ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Three                                                                 ; work         ;
-;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ; work         ;
+;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ; work         ;
+;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block                                  ;              ;
+;                |altsyncram_m691:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated   ;              ;
+;       |lpm_ram_dq:MEM_plus_Three|               ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Three                                                                 ;              ;
+;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ;              ;
 ;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block                                ; work         ;
-;                |altsyncram_ia91:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated ; work         ;
-;       |lpm_ram_dq:MEM_plus_Two|                 ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Two                                                                   ; work         ;
+;                |altsyncram_m691:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated ; work         ;
+;       |lpm_ram_dq:MEM_plus_Two|                 ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Two                                                                   ;              ;
 ;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram                                                       ;              ;
 ;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block                                  ;              ;
-;                |altsyncram_ia91:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated   ; work         ;
+;                |altsyncram_m691:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated   ;              ;
 ;       |lpm_ram_dq:MEM|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM                                                                            ; work         ;
 ;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM|altram:sram                                                                ;              ;
 ;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block                                           ; work         ;
-;                |altsyncram_ia91:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated            ;              ;
+;                |altsyncram_m691:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated            ; work         ;
 ;    |MuxRDn:inst34|                              ; 5 (5)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MuxRDn:inst34                                                                                           ; work         ;
 ;    |MuxRDx:inst32|                              ; 5 (5)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MuxRDx:inst32                                                                                           ; work         ;
 ;    |MuxUlaSourceA:inst9|                        ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MuxUlaSourceA:inst9                                                                                     ; work         ;
-;    |RegDesloc:inst29|                           ; 394 (394)         ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|RegDesloc:inst29                                                                                        ; work         ;
+;    |RegDesloc:inst29|                           ; 394 (394)         ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|RegDesloc:inst29                                                                                        ;              ;
 ;    |Registrador:inst12|                         ; 2 (2)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Registrador:inst12                                                                                      ; work         ;
 ;    |Registrador:inst17|                         ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Registrador:inst17                                                                                      ; work         ;
 ;    |Registrador:inst7|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Registrador:inst7                                                                                       ; work         ;
 ;    |Registrador:inst8|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Registrador:inst8                                                                                       ; work         ;
 ;    |Registrador:inst|                           ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Registrador:inst                                                                                        ; work         ;
-;    |StoreControl:inst11|                        ; 34 (34)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|StoreControl:inst11                                                                                     ; work         ;
-;    |Ula32:ULA|                                  ; 168 (168)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Ula32:ULA                                                                                               ; work         ;
+;    |StoreControl:inst38|                        ; 57 (57)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|StoreControl:inst38                                                                                     ; work         ;
+;    |Ula32:ULA|                                  ; 169 (169)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Ula32:ULA                                                                                               ; work         ;
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                     ;
-+--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------+
-; Name                                                                                                               ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF     ;
-+--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------+
-; Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; SRL.mif ;
-; Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; SRL.mif ;
-; Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; SRL.mif ;
-; Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated|ALTSYNCRAM            ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; SRL.mif ;
-+--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                    ;
++--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------+
+; Name                                                                                                               ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF    ;
++--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------+
+; Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; SB.mif ;
+; Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; SB.mif ;
+; Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; SB.mif ;
+; Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated|ALTSYNCRAM            ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; SB.mif ;
++--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------+
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |HW|Controler:inst31|Estado                                                                                                                                                                                                                                                                                                                                                                                                             ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
-; Name           ; Estado.0011000 ; Estado.0010111 ; Estado.0010110 ; Estado.0010101 ; Estado.0010100 ; Estado.0010011 ; Estado.0010010 ; Estado.0010001 ; Estado.0010000 ; Estado.0001111 ; Estado.0001110 ; Estado.0001101 ; Estado.0001100 ; Estado.0001011 ; Estado.0001010 ; Estado.0001001 ; Estado.0001000 ; Estado.0000111 ; Estado.0000110 ; Estado.0000101 ; Estado.0000100 ; Estado.0000011 ; Estado.0000010 ; Estado.0000001 ; Estado.0000000 ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
-; Estado.0000000 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ;
-; Estado.0000001 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 1              ;
-; Estado.0000010 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 1              ;
-; Estado.0000011 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 1              ;
-; Estado.0000100 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0000101 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0000110 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0000111 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0001000 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0001001 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0001010 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0001011 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0001100 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0001101 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0001110 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0001111 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0010000 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0010001 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0010010 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0010011 ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0010100 ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0010101 ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0010110 ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0010111 ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-; Estado.0011000 ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |HW|Controler:inst31|Estado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+; Name           ; Estado.0011100 ; Estado.0011011 ; Estado.0011010 ; Estado.0011001 ; Estado.0011000 ; Estado.0010111 ; Estado.0010110 ; Estado.0010101 ; Estado.0010100 ; Estado.0010011 ; Estado.0010010 ; Estado.0010001 ; Estado.0010000 ; Estado.0001111 ; Estado.0001110 ; Estado.0001101 ; Estado.0001100 ; Estado.0001011 ; Estado.0001010 ; Estado.0001001 ; Estado.0001000 ; Estado.0000111 ; Estado.0000110 ; Estado.0000101 ; Estado.0000100 ; Estado.0000011 ; Estado.0000010 ; Estado.0000001 ; Estado.0000000 ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
+; Estado.0000000 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ;
+; Estado.0000001 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 1              ;
+; Estado.0000010 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 1              ;
+; Estado.0000011 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 1              ;
+; Estado.0000100 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0000101 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0000110 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0000111 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0001000 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0001001 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0001010 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0001011 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0001100 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0001101 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0001110 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0001111 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0010000 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0010001 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0010010 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0010011 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0010100 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0010101 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0010110 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0010111 ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0011000 ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0011001 ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0011010 ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0011011 ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
+; Estado.0011100 ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                             ;
-+-----------------------------------------------------+----------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal              ; Free of Timing Hazards ;
-+-----------------------------------------------------+----------------------------------+------------------------+
-; StoreControl:inst11|Output[31]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[30]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[29]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[28]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[27]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[26]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[25]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[24]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[23]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[22]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[21]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[20]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[19]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[18]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[17]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[16]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[15]                      ; Controler:inst31|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[14]                      ; Controler:inst31|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[13]                      ; Controler:inst31|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[12]                      ; Controler:inst31|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[11]                      ; Controler:inst31|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[10]                      ; Controler:inst31|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[9]                       ; Controler:inst31|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[8]                       ; Controler:inst31|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[7]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[6]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[5]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[4]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[3]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[2]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[1]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[0]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
-; PCSrc:inst10|Out[31]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[30]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[29]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[28]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[27]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[26]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[25]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[24]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[23]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[22]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[21]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[20]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[19]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[18]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[17]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[16]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[15]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[14]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[13]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[12]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[11]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[10]                                ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[9]                                 ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[8]                                 ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[7]                                 ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[6]                                 ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[5]                                 ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[4]                                 ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[3]                                 ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[2]                                 ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[1]                                 ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; PCSrc:inst10|Out[0]                                 ; Controler:inst31|PCSrc[0]        ; yes                    ;
-; MUXMDR:inst16|Out[31]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[0]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[1]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[2]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[3]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[4]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[30]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[29]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[28]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[27]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[26]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[25]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[24]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[23]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[22]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[21]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[20]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[19]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[18]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[17]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[16]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[15]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[14]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[13]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[12]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[11]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[10]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[9]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[8]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[7]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[6]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[5]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
-; Number of user-specified and inferred latches = 96  ;                                  ;                        ;
-+-----------------------------------------------------+----------------------------------+------------------------+
++----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                      ;
++-----------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal       ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------------+------------------------+
+; StoreControl:inst38|Output[31]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[30]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[29]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[28]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[27]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[26]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[25]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[24]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[23]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[22]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[21]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[20]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[19]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[18]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[17]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[16]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[15]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[14]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[13]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[12]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[11]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[10]                      ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[9]                       ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[8]                       ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[7]                       ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[6]                       ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[5]                       ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[4]                       ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[3]                       ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[2]                       ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[1]                       ; StoreControl:inst38|Mux24 ; yes                    ;
+; StoreControl:inst38|Output[0]                       ; StoreControl:inst38|Mux24 ; yes                    ;
+; PCSrc:inst10|Out[31]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[30]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[29]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[28]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[27]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[26]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[25]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[24]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[23]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[22]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[21]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[20]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[19]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[18]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[17]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[16]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[15]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[14]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[13]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[12]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[11]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[10]                                ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[9]                                 ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[8]                                 ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[7]                                 ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[6]                                 ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[5]                                 ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[4]                                 ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[3]                                 ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[2]                                 ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[1]                                 ; Controler:inst31|PCSrc[0] ; yes                    ;
+; PCSrc:inst10|Out[0]                                 ; Controler:inst31|PCSrc[0] ; yes                    ;
+; MUXMDR:inst16|Out[31]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[0]                                ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[1]                                ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[2]                                ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[3]                                ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[4]                                ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[30]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[29]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[28]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[27]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[26]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[25]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[24]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[23]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[22]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[21]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[20]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[19]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[18]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[17]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[16]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[15]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[14]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[13]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[12]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[11]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[10]                               ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[9]                                ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[8]                                ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[7]                                ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[6]                                ; MUXMDR:inst16|Mux32       ; yes                    ;
+; MUXMDR:inst16|Out[5]                                ; MUXMDR:inst16|Mux32       ; yes                    ;
+; Number of user-specified and inferred latches = 96  ;                           ;                        ;
++-----------------------------------------------------+---------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -467,12 +471,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1303  ;
+; Total registers                              ; 1307  ;
 ; Number of registers using Synchronous Clear  ; 58    ;
 ; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 1248  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1257  ;
+; Number of registers using Clock Enable       ; 1262  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -493,28 +497,30 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; 8:1                ; 32 bits   ; 160 ALUTs     ; 64 ALUTs             ; 96 ALUTs               ; Yes        ; |HW|Registrador:inst12|Saida[20] ;
-; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; Yes        ; |HW|Registrador:inst8|Saida[29]  ;
-; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; Yes        ; |HW|Registrador:inst7|Saida[20]  ;
-; 6:1                ; 2 bits    ; 8 ALUTs       ; 4 ALUTs              ; 4 ALUTs                ; Yes        ; |HW|Controler:inst31|Shift[1]    ;
-; 14:1               ; 13 bits   ; 117 ALUTs     ; 78 ALUTs             ; 39 ALUTs               ; Yes        ; |HW|RegDesloc:inst29|temp[1]     ;
-; 14:1               ; 13 bits   ; 117 ALUTs     ; 78 ALUTs             ; 39 ALUTs               ; Yes        ; |HW|RegDesloc:inst29|temp[22]    ;
+; 8:1                ; 32 bits   ; 160 ALUTs     ; 64 ALUTs             ; 96 ALUTs               ; Yes        ; |HW|Registrador:inst12|Saida[28] ;
+; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; Yes        ; |HW|Registrador:inst8|Saida[24]  ;
+; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; Yes        ; |HW|Registrador:inst7|Saida[23]  ;
+; 6:1                ; 2 bits    ; 8 ALUTs       ; 4 ALUTs              ; 4 ALUTs                ; Yes        ; |HW|Controler:inst31|Shift[2]    ;
+; 14:1               ; 13 bits   ; 117 ALUTs     ; 78 ALUTs             ; 39 ALUTs               ; Yes        ; |HW|RegDesloc:inst29|temp[10]    ;
+; 14:1               ; 13 bits   ; 117 ALUTs     ; 78 ALUTs             ; 39 ALUTs               ; Yes        ; |HW|RegDesloc:inst29|temp[20]    ;
 ; 1:1                ; 32 bits   ; 0 ALUTs       ; 0 ALUTs              ; 0 ALUTs                ; No         ; |HW|PCSrc:inst10|Mux11           ;
-; 1:1                ; 8 bits    ; 0 ALUTs       ; 0 ALUTs              ; 0 ALUTs                ; No         ; |HW|MUXMDR:inst16|Mux1           ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |HW|MuxUlaSourceA:inst9|Mux24    ;
-; 4:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |HW|MUXMemToReg:inst5|Mux29      ;
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |HW|MUXMDR:inst16|Mux31          ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; No         ; |HW|MUXMDR:inst16|Mux9           ;
-; 8:1                ; 32 bits   ; 160 ALUTs     ; 64 ALUTs             ; 96 ALUTs               ; No         ; |HW|Ula32:ULA|Mux63              ;
-; 5:1                ; 16 bits   ; 48 ALUTs      ; 32 ALUTs             ; 16 ALUTs               ; No         ; |HW|MUXUlaSourceB:inst13|Mux29   ;
-; 5:1                ; 16 bits   ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |HW|MUXUlaSourceB:inst13|Mux2    ;
-; 10:1               ; 7 bits    ; 42 ALUTs      ; 42 ALUTs             ; 0 ALUTs                ; No         ; |HW|Controler:inst31|Selector66  ;
-; 15:1               ; 12 bits   ; 120 ALUTs     ; 120 ALUTs            ; 0 ALUTs                ; No         ; |HW|Controler:inst31|Selector91  ;
+; 1:1                ; 8 bits    ; 0 ALUTs       ; 0 ALUTs              ; 0 ALUTs                ; No         ; |HW|MUXMDR:inst16|Mux4           ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; No         ; |HW|StoreControl:inst38|Mux4     ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 16 ALUTs             ; 16 ALUTs               ; No         ; |HW|StoreControl:inst38|Mux10    ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |HW|MuxUlaSourceA:inst9|Mux13    ;
+; 4:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |HW|MUXMemToReg:inst5|Mux23      ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |HW|MUXMDR:inst16|Mux17          ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; No         ; |HW|MUXMDR:inst16|Mux12          ;
+; 8:1                ; 32 bits   ; 160 ALUTs     ; 64 ALUTs             ; 96 ALUTs               ; No         ; |HW|Ula32:ULA|Mux50              ;
+; 5:1                ; 16 bits   ; 48 ALUTs      ; 32 ALUTs             ; 16 ALUTs               ; No         ; |HW|MUXUlaSourceB:inst13|Mux25   ;
+; 5:1                ; 16 bits   ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |HW|MUXUlaSourceB:inst13|Mux15   ;
+; 10:1               ; 7 bits    ; 42 ALUTs      ; 42 ALUTs             ; 0 ALUTs                ; No         ; |HW|Controler:inst31|Selector78  ;
+; 19:1               ; 16 bits   ; 192 ALUTs     ; 192 ALUTs            ; 0 ALUTs                ; No         ; |HW|Controler:inst31|Selector100 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated ;
+; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated ;
 +---------------------------------+--------------------+------+-------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                    ;
 +---------------------------------+--------------------+------+-------------------------------------------------------+
@@ -523,7 +529,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated ;
+; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                             ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------+
@@ -532,7 +538,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated ;
+; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                             ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------+
@@ -541,7 +547,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +--------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated ;
+; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                               ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------+
@@ -560,7 +566,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; LPM_INDATA             ; REGISTERED ; Untyped                             ;
 ; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                             ;
 ; LPM_OUTDATA            ; REGISTERED ; Untyped                             ;
-; LPM_FILE               ; SRL.mif    ; Untyped                             ;
+; LPM_FILE               ; SB.mif     ; Untyped                             ;
 ; USE_EAB                ; ON         ; Untyped                             ;
 ; DEVICE_FAMILY          ; Stratix II ; Untyped                             ;
 ; CBXI_PARAMETER         ; NOTHING    ; Untyped                             ;
@@ -583,7 +589,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_INDATA             ; REGISTERED ; Untyped                                      ;
 ; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                                      ;
 ; LPM_OUTDATA            ; REGISTERED ; Untyped                                      ;
-; LPM_FILE               ; SRL.mif    ; Untyped                                      ;
+; LPM_FILE               ; SB.mif     ; Untyped                                      ;
 ; USE_EAB                ; ON         ; Untyped                                      ;
 ; DEVICE_FAMILY          ; Stratix II ; Untyped                                      ;
 ; CBXI_PARAMETER         ; NOTHING    ; Untyped                                      ;
@@ -606,7 +612,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_INDATA             ; REGISTERED ; Untyped                                      ;
 ; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                                      ;
 ; LPM_OUTDATA            ; REGISTERED ; Untyped                                      ;
-; LPM_FILE               ; SRL.mif    ; Untyped                                      ;
+; LPM_FILE               ; SB.mif     ; Untyped                                      ;
 ; USE_EAB                ; ON         ; Untyped                                      ;
 ; DEVICE_FAMILY          ; Stratix II ; Untyped                                      ;
 ; CBXI_PARAMETER         ; NOTHING    ; Untyped                                      ;
@@ -629,7 +635,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_INDATA             ; REGISTERED ; Untyped                                        ;
 ; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                                        ;
 ; LPM_OUTDATA            ; REGISTERED ; Untyped                                        ;
-; LPM_FILE               ; SRL.mif    ; Untyped                                        ;
+; LPM_FILE               ; SB.mif     ; Untyped                                        ;
 ; USE_EAB                ; ON         ; Untyped                                        ;
 ; DEVICE_FAMILY          ; Stratix II ; Untyped                                        ;
 ; CBXI_PARAMETER         ; NOTHING    ; Untyped                                        ;
@@ -647,7 +653,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu May 16 19:32:02 2019
+    Info: Processing started: Thu May 16 20:46:55 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HW -c HW
 Info: Found 1 design units, including 1 entities, in source file ulasourceb.v
     Info: Found entity 1: MUXUlaSourceB
@@ -700,6 +706,7 @@ Info: Found 1 design units, including 1 entities, in source file muxrdx.v
 Info: Found 1 design units, including 1 entities, in source file muxrdn.v
     Info: Found entity 1: MuxRDn
 Info: Elaborating entity "HW" for the top level hierarchy
+Warning: Block or symbol "Memoria" of instance "inst2" overlaps another block or symbol
 Info: Elaborating entity "Memoria" for hierarchy "Memoria:inst2"
 Info: Elaborating entity "LPM_RAM_DQ" for hierarchy "Memoria:inst2|LPM_RAM_DQ:MEM"
 Info: Elaborated megafunction instantiation "Memoria:inst2|LPM_RAM_DQ:MEM"
@@ -710,7 +717,7 @@ Info: Instantiated megafunction "Memoria:inst2|LPM_RAM_DQ:MEM" with the followin
     Info: Parameter "LPM_INDATA" = "REGISTERED"
     Info: Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
     Info: Parameter "LPM_OUTDATA" = "REGISTERED"
-    Info: Parameter "LPM_FILE" = "SRL.mif"
+    Info: Parameter "LPM_FILE" = "SB.mif"
     Info: Parameter "LPM_TYPE" = "LPM_RAM_DQ"
     Info: Parameter "USE_EAB" = "ON"
     Info: Parameter "INTENDED_DEVICE_FAMILY" = "UNUSED"
@@ -720,14 +727,13 @@ Warning: Assertion warning: altram does not support Stratix II device family -- 
 Info: Elaborated megafunction instantiation "Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram", which is child of megafunction instantiation "Memoria:inst2|LPM_RAM_DQ:MEM"
 Info: Elaborating entity "altsyncram" for hierarchy "Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block"
 Info: Elaborated megafunction instantiation "Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block", which is child of megafunction instantiation "Memoria:inst2|LPM_RAM_DQ:MEM"
-Info: Found 1 design units, including 1 entities, in source file db/altsyncram_ia91.tdf
-    Info: Found entity 1: altsyncram_ia91
-Info: Elaborating entity "altsyncram_ia91" for hierarchy "Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_ia91:auto_generated"
-Critical Warning: Memory depth (256) in the design file differs from memory depth (4) in the Memory Initialization File "SRL.mif" -- setting initial value for remaining addresses to 0
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_m691.tdf
+    Info: Found entity 1: altsyncram_m691
+Info: Elaborating entity "altsyncram_m691" for hierarchy "Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_m691:auto_generated"
 Info: Elaborating entity "Controler" for hierarchy "Controler:inst31"
-Warning (10763): Verilog HDL warning at Control.v(420): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10763): Verilog HDL warning at Control.v(418): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10763): Verilog HDL warning at Control.v(78): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10763): Verilog HDL warning at Control.v(478): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10763): Verilog HDL warning at Control.v(476): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10763): Verilog HDL warning at Control.v(82): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
 Warning (10034): Output port "MultCtrl" at Control.v(7) has no driver
 Warning (10034): Output port "DivCtrl" at Control.v(7) has no driver
 Info: Elaborating entity "Instr_Reg" for hierarchy "Instr_Reg:inst3"
@@ -957,7 +963,7 @@ Info (10041): Inferred latch for "Out[28]" at PCSrc.v(8)
 Info (10041): Inferred latch for "Out[29]" at PCSrc.v(8)
 Info (10041): Inferred latch for "Out[30]" at PCSrc.v(8)
 Info (10041): Inferred latch for "Out[31]" at PCSrc.v(8)
-Info: Elaborating entity "StoreControl" for hierarchy "StoreControl:inst11"
+Info: Elaborating entity "StoreControl" for hierarchy "StoreControl:inst38"
 Warning (10270): Verilog HDL Case Statement warning at StoreControl.v(8): incomplete case statement has no default case item
 Warning (10240): Verilog HDL Always Construct warning at StoreControl.v(8): inferring latch(es) for variable "Output", which holds its previous value in one or more paths through the always construct
 Info (10041): Inferred latch for "Output[0]" at StoreControl.v(8)
@@ -1137,6 +1143,54 @@ Warning: LATCH primitive "MUXUlaSourceB:inst13|Out[27]" is permanently enabled
 Warning: LATCH primitive "MUXUlaSourceB:inst13|Out[28]" is permanently enabled
 Warning: LATCH primitive "MUXUlaSourceB:inst13|Out[29]" is permanently enabled
 Warning: LATCH primitive "MUXUlaSourceB:inst13|Out[30]" is permanently enabled
+Warning: Latch StoreControl:inst38|Output[31] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[30] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[29] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[28] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[27] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[26] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[25] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[24] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[23] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[22] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[21] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[20] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[19] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[18] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[17] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[16] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[0]
+Warning: Latch StoreControl:inst38|Output[15] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[1]
+Warning: Latch StoreControl:inst38|Output[14] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[1]
+Warning: Latch StoreControl:inst38|Output[13] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[1]
+Warning: Latch StoreControl:inst38|Output[12] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[1]
+Warning: Latch StoreControl:inst38|Output[11] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[1]
+Warning: Latch StoreControl:inst38|Output[10] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[1]
+Warning: Latch StoreControl:inst38|Output[9] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[1]
+Warning: Latch StoreControl:inst38|Output[8] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|StoreControl[1]
 Warning: Latch MUXMDR:inst16|Out[31] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst31|MDRMux[0]
 Warning: Latch MUXMDR:inst16|Out[30] has unsafe behavior
@@ -1226,15 +1280,15 @@ Info: 7 registers lost all their fanouts during netlist optimizations. The first
     Info: Register "Controler:inst31|Estado~6" lost all its fanouts during netlist optimizations.
     Info: Register "Controler:inst31|Estado~7" lost all its fanouts during netlist optimizations.
     Info: Register "Controler:inst31|Estado~8" lost all its fanouts during netlist optimizations.
-Info: Implemented 2921 device resources after synthesis - the final resource count might be different
+Info: Implemented 2967 device resources after synthesis - the final resource count might be different
     Info: Implemented 1 input pins
     Info: Implemented 160 output pins
-    Info: Implemented 2728 logic cells
+    Info: Implemented 2774 logic cells
     Info: Implemented 32 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 251 warnings
-    Info: Peak virtual memory: 268 megabytes
-    Info: Processing ended: Thu May 16 19:32:56 2019
-    Info: Elapsed time: 00:00:54
-    Info: Total CPU time (on all processors): 00:01:05
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 299 warnings
+    Info: Peak virtual memory: 267 megabytes
+    Info: Processing ended: Thu May 16 20:47:52 2019
+    Info: Elapsed time: 00:00:57
+    Info: Total CPU time (on all processors): 00:01:06
 
 
