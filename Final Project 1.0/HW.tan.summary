@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.469 ns
-From           : StoreControl:inst11|Output[18]
-To             : OutputSC[18]
+Actual Time    : 9.932 ns
+From           : StoreControl:inst11|Output[19]
+To             : OutputSC[19]
 From Clock     : CLK
 To Clock       : --
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'CLK'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 128.63 MHz ( period = 7.774 ns )
-From           : Controler:inst15|ALUSrcB[0]
-To             : Registrador:inst12|Saida[31]
+Actual Time    : 100.56 MHz ( period = 9.944 ns )
+From           : Controler:inst26|ALUSrcB[0]
+To             : Registrador:inst|Saida[25]
 From Clock     : CLK
 To Clock       : CLK
 Failed Paths   : 0
@@ -26,8 +26,8 @@ Type           : Clock Hold: 'CLK'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : Registrador:inst12|Saida[7]
-To             : StoreControl:inst11|Output[7]
+From           : Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated|q_a[2]
+To             : MUXMDR:inst16|Out[2]
 From Clock     : CLK
 To Clock       : CLK
 Failed Paths   : 104

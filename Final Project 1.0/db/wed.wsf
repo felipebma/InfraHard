@@ -46718,8 +46718,8 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/TestCPU.
 VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 900687;
-		ZEND = 978734;
+		ZBEGIN = 535589;
+		ZEND = 613636;
 		NUMERATOR = 563;
 		DENOMINATOR = 59540;
 		TOP_INDEX = 0;
@@ -55189,7 +55189,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Controler:inst15|Estado";
+		SIGNAL = "PC[31]";
 		INDEX = 1057;
 		FORMAT = E;
 		SCALE = 1;
@@ -55197,7 +55197,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[31]";
+		SIGNAL = "PC[30]";
 		INDEX = 1058;
 		FORMAT = E;
 		SCALE = 1;
@@ -55205,7 +55205,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[30]";
+		SIGNAL = "PC[29]";
 		INDEX = 1059;
 		FORMAT = E;
 		SCALE = 1;
@@ -55213,7 +55213,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[29]";
+		SIGNAL = "PC[28]";
 		INDEX = 1060;
 		FORMAT = E;
 		SCALE = 1;
@@ -55221,7 +55221,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[28]";
+		SIGNAL = "PC[27]";
 		INDEX = 1061;
 		FORMAT = E;
 		SCALE = 1;
@@ -55229,7 +55229,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[27]";
+		SIGNAL = "PC[26]";
 		INDEX = 1062;
 		FORMAT = E;
 		SCALE = 1;
@@ -55237,7 +55237,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[26]";
+		SIGNAL = "PC[25]";
 		INDEX = 1063;
 		FORMAT = E;
 		SCALE = 1;
@@ -55245,7 +55245,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[25]";
+		SIGNAL = "PC[24]";
 		INDEX = 1064;
 		FORMAT = E;
 		SCALE = 1;
@@ -55253,7 +55253,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[24]";
+		SIGNAL = "PC[23]";
 		INDEX = 1065;
 		FORMAT = E;
 		SCALE = 1;
@@ -55261,7 +55261,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[23]";
+		SIGNAL = "PC[22]";
 		INDEX = 1066;
 		FORMAT = E;
 		SCALE = 1;
@@ -55269,7 +55269,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[22]";
+		SIGNAL = "PC[21]";
 		INDEX = 1067;
 		FORMAT = E;
 		SCALE = 1;
@@ -55277,7 +55277,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[21]";
+		SIGNAL = "PC[20]";
 		INDEX = 1068;
 		FORMAT = E;
 		SCALE = 1;
@@ -55285,7 +55285,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[20]";
+		SIGNAL = "PC[19]";
 		INDEX = 1069;
 		FORMAT = E;
 		SCALE = 1;
@@ -55293,7 +55293,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[19]";
+		SIGNAL = "PC[18]";
 		INDEX = 1070;
 		FORMAT = E;
 		SCALE = 1;
@@ -55301,7 +55301,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[18]";
+		SIGNAL = "PC[17]";
 		INDEX = 1071;
 		FORMAT = E;
 		SCALE = 1;
@@ -55309,7 +55309,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[17]";
+		SIGNAL = "PC[16]";
 		INDEX = 1072;
 		FORMAT = E;
 		SCALE = 1;
@@ -55317,7 +55317,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[16]";
+		SIGNAL = "PC[15]";
 		INDEX = 1073;
 		FORMAT = E;
 		SCALE = 1;
@@ -55325,7 +55325,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[15]";
+		SIGNAL = "PC[14]";
 		INDEX = 1074;
 		FORMAT = E;
 		SCALE = 1;
@@ -55333,7 +55333,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[14]";
+		SIGNAL = "PC[13]";
 		INDEX = 1075;
 		FORMAT = E;
 		SCALE = 1;
@@ -55341,7 +55341,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[13]";
+		SIGNAL = "PC[12]";
 		INDEX = 1076;
 		FORMAT = E;
 		SCALE = 1;
@@ -55349,7 +55349,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[12]";
+		SIGNAL = "PC[11]";
 		INDEX = 1077;
 		FORMAT = E;
 		SCALE = 1;
@@ -55357,7 +55357,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[11]";
+		SIGNAL = "PC[10]";
 		INDEX = 1078;
 		FORMAT = E;
 		SCALE = 1;
@@ -55365,7 +55365,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[10]";
+		SIGNAL = "PC[9]";
 		INDEX = 1079;
 		FORMAT = E;
 		SCALE = 1;
@@ -55373,7 +55373,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[9]";
+		SIGNAL = "PC[8]";
 		INDEX = 1080;
 		FORMAT = E;
 		SCALE = 1;
@@ -55381,7 +55381,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[8]";
+		SIGNAL = "PC[7]";
 		INDEX = 1081;
 		FORMAT = E;
 		SCALE = 1;
@@ -55389,7 +55389,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[7]";
+		SIGNAL = "PC[6]";
 		INDEX = 1082;
 		FORMAT = E;
 		SCALE = 1;
@@ -55397,7 +55397,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[6]";
+		SIGNAL = "PC[5]";
 		INDEX = 1083;
 		FORMAT = E;
 		SCALE = 1;
@@ -55405,7 +55405,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[5]";
+		SIGNAL = "PC[4]";
 		INDEX = 1084;
 		FORMAT = E;
 		SCALE = 1;
@@ -55413,7 +55413,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[4]";
+		SIGNAL = "PC[3]";
 		INDEX = 1085;
 		FORMAT = E;
 		SCALE = 1;
@@ -55421,7 +55421,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[3]";
+		SIGNAL = "PC[2]";
 		INDEX = 1086;
 		FORMAT = E;
 		SCALE = 1;
@@ -55429,7 +55429,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[2]";
+		SIGNAL = "PC[1]";
 		INDEX = 1087;
 		FORMAT = E;
 		SCALE = 1;
@@ -55437,7 +55437,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[1]";
+		SIGNAL = "PC[0]";
 		INDEX = 1088;
 		FORMAT = E;
 		SCALE = 1;
@@ -55445,16 +55445,8 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PC[0]";
-		INDEX = 1089;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "OutputMem";
-		INDEX = 1090;
+		INDEX = 1089;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55462,7 +55454,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[31]";
-		INDEX = 1091;
+		INDEX = 1090;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55470,7 +55462,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[30]";
-		INDEX = 1092;
+		INDEX = 1091;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55478,7 +55470,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[29]";
-		INDEX = 1093;
+		INDEX = 1092;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55486,7 +55478,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[28]";
-		INDEX = 1094;
+		INDEX = 1093;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55494,7 +55486,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[27]";
-		INDEX = 1095;
+		INDEX = 1094;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55502,7 +55494,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[26]";
-		INDEX = 1096;
+		INDEX = 1095;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55510,7 +55502,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[25]";
-		INDEX = 1097;
+		INDEX = 1096;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55518,7 +55510,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[24]";
-		INDEX = 1098;
+		INDEX = 1097;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55526,7 +55518,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[23]";
-		INDEX = 1099;
+		INDEX = 1098;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55534,7 +55526,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[22]";
-		INDEX = 1100;
+		INDEX = 1099;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55542,7 +55534,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[21]";
-		INDEX = 1101;
+		INDEX = 1100;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55550,7 +55542,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[20]";
-		INDEX = 1102;
+		INDEX = 1101;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55558,7 +55550,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[19]";
-		INDEX = 1103;
+		INDEX = 1102;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55566,7 +55558,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[18]";
-		INDEX = 1104;
+		INDEX = 1103;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55574,7 +55566,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[17]";
-		INDEX = 1105;
+		INDEX = 1104;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55582,7 +55574,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[16]";
-		INDEX = 1106;
+		INDEX = 1105;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55590,7 +55582,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[15]";
-		INDEX = 1107;
+		INDEX = 1106;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55598,7 +55590,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[14]";
-		INDEX = 1108;
+		INDEX = 1107;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55606,7 +55598,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[13]";
-		INDEX = 1109;
+		INDEX = 1108;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55614,7 +55606,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[12]";
-		INDEX = 1110;
+		INDEX = 1109;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55622,7 +55614,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[11]";
-		INDEX = 1111;
+		INDEX = 1110;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55630,7 +55622,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[10]";
-		INDEX = 1112;
+		INDEX = 1111;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55638,7 +55630,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[9]";
-		INDEX = 1113;
+		INDEX = 1112;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55646,7 +55638,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[8]";
-		INDEX = 1114;
+		INDEX = 1113;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55654,7 +55646,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[7]";
-		INDEX = 1115;
+		INDEX = 1114;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55662,7 +55654,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[6]";
-		INDEX = 1116;
+		INDEX = 1115;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55670,7 +55662,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[5]";
-		INDEX = 1117;
+		INDEX = 1116;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55678,7 +55670,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[4]";
-		INDEX = 1118;
+		INDEX = 1117;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55686,7 +55678,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[3]";
-		INDEX = 1119;
+		INDEX = 1118;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55694,7 +55686,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[2]";
-		INDEX = 1120;
+		INDEX = 1119;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55702,7 +55694,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[1]";
-		INDEX = 1121;
+		INDEX = 1120;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55710,7 +55702,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputMem[0]";
-		INDEX = 1122;
+		INDEX = 1121;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55718,7 +55710,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU";
-		INDEX = 1123;
+		INDEX = 1122;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55726,7 +55718,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[31]";
-		INDEX = 1124;
+		INDEX = 1123;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55734,7 +55726,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[30]";
-		INDEX = 1125;
+		INDEX = 1124;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55742,7 +55734,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[29]";
-		INDEX = 1126;
+		INDEX = 1125;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55750,7 +55742,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[28]";
-		INDEX = 1127;
+		INDEX = 1126;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55758,7 +55750,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[27]";
-		INDEX = 1128;
+		INDEX = 1127;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55766,7 +55758,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[26]";
-		INDEX = 1129;
+		INDEX = 1128;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55774,7 +55766,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[25]";
-		INDEX = 1130;
+		INDEX = 1129;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55782,7 +55774,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[24]";
-		INDEX = 1131;
+		INDEX = 1130;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55790,7 +55782,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[23]";
-		INDEX = 1132;
+		INDEX = 1131;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55798,7 +55790,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[22]";
-		INDEX = 1133;
+		INDEX = 1132;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55806,7 +55798,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[21]";
-		INDEX = 1134;
+		INDEX = 1133;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55814,7 +55806,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[20]";
-		INDEX = 1135;
+		INDEX = 1134;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55822,7 +55814,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[19]";
-		INDEX = 1136;
+		INDEX = 1135;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55830,7 +55822,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[18]";
-		INDEX = 1137;
+		INDEX = 1136;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55838,7 +55830,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[17]";
-		INDEX = 1138;
+		INDEX = 1137;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55846,7 +55838,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[16]";
-		INDEX = 1139;
+		INDEX = 1138;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55854,7 +55846,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[15]";
-		INDEX = 1140;
+		INDEX = 1139;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55862,7 +55854,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[14]";
-		INDEX = 1141;
+		INDEX = 1140;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55870,7 +55862,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[13]";
-		INDEX = 1142;
+		INDEX = 1141;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55878,7 +55870,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[12]";
-		INDEX = 1143;
+		INDEX = 1142;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55886,7 +55878,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[11]";
-		INDEX = 1144;
+		INDEX = 1143;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55894,7 +55886,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[10]";
-		INDEX = 1145;
+		INDEX = 1144;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55902,7 +55894,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[9]";
-		INDEX = 1146;
+		INDEX = 1145;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55910,7 +55902,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[8]";
-		INDEX = 1147;
+		INDEX = 1146;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55918,7 +55910,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[7]";
-		INDEX = 1148;
+		INDEX = 1147;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55926,7 +55918,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[6]";
-		INDEX = 1149;
+		INDEX = 1148;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55934,7 +55926,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[5]";
-		INDEX = 1150;
+		INDEX = 1149;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55942,7 +55934,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[4]";
-		INDEX = 1151;
+		INDEX = 1150;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55950,7 +55942,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[3]";
-		INDEX = 1152;
+		INDEX = 1151;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55958,7 +55950,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[2]";
-		INDEX = 1153;
+		INDEX = 1152;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55966,7 +55958,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[1]";
-		INDEX = 1154;
+		INDEX = 1153;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55974,7 +55966,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputRegALU[0]";
-		INDEX = 1155;
+		INDEX = 1154;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55982,7 +55974,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC";
-		INDEX = 1156;
+		INDEX = 1155;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55990,7 +55982,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[31]";
-		INDEX = 1157;
+		INDEX = 1156;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -55998,7 +55990,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[30]";
-		INDEX = 1158;
+		INDEX = 1157;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56006,7 +55998,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[29]";
-		INDEX = 1159;
+		INDEX = 1158;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56014,7 +56006,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[28]";
-		INDEX = 1160;
+		INDEX = 1159;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56022,7 +56014,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[27]";
-		INDEX = 1161;
+		INDEX = 1160;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56030,7 +56022,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[26]";
-		INDEX = 1162;
+		INDEX = 1161;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56038,7 +56030,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[25]";
-		INDEX = 1163;
+		INDEX = 1162;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56046,7 +56038,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[24]";
-		INDEX = 1164;
+		INDEX = 1163;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56054,7 +56046,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[23]";
-		INDEX = 1165;
+		INDEX = 1164;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56062,7 +56054,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[22]";
-		INDEX = 1166;
+		INDEX = 1165;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56070,7 +56062,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[21]";
-		INDEX = 1167;
+		INDEX = 1166;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56078,7 +56070,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[20]";
-		INDEX = 1168;
+		INDEX = 1167;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56086,7 +56078,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[19]";
-		INDEX = 1169;
+		INDEX = 1168;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56094,7 +56086,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[18]";
-		INDEX = 1170;
+		INDEX = 1169;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56102,7 +56094,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[17]";
-		INDEX = 1171;
+		INDEX = 1170;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56110,7 +56102,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[16]";
-		INDEX = 1172;
+		INDEX = 1171;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56118,7 +56110,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[15]";
-		INDEX = 1173;
+		INDEX = 1172;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56126,7 +56118,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[14]";
-		INDEX = 1174;
+		INDEX = 1173;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56134,7 +56126,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[13]";
-		INDEX = 1175;
+		INDEX = 1174;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56142,7 +56134,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[12]";
-		INDEX = 1176;
+		INDEX = 1175;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56150,7 +56142,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[11]";
-		INDEX = 1177;
+		INDEX = 1176;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56158,7 +56150,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[10]";
-		INDEX = 1178;
+		INDEX = 1177;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56166,7 +56158,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[9]";
-		INDEX = 1179;
+		INDEX = 1178;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56174,7 +56166,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[8]";
-		INDEX = 1180;
+		INDEX = 1179;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56182,7 +56174,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[7]";
-		INDEX = 1181;
+		INDEX = 1180;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56190,7 +56182,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[6]";
-		INDEX = 1182;
+		INDEX = 1181;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56198,7 +56190,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[5]";
-		INDEX = 1183;
+		INDEX = 1182;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56206,7 +56198,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[4]";
-		INDEX = 1184;
+		INDEX = 1183;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56214,7 +56206,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[3]";
-		INDEX = 1185;
+		INDEX = 1184;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56222,7 +56214,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[2]";
-		INDEX = 1186;
+		INDEX = 1185;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56230,7 +56222,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[1]";
-		INDEX = 1187;
+		INDEX = 1186;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -56238,7 +56230,7 @@ VECTOR("C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/HW.si
 	}
 	LINE{
 		SIGNAL = "OutputSC[0]";
-		INDEX = 1188;
+		INDEX = 1187;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

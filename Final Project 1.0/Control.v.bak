@@ -1,20 +1,24 @@
-module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite,PCSrc,ALUop,ALUSrcA,ALUSrcB,RegWrite,RegDst,ALUout,AWrite,BWrite,MultCtrl,DivCtrl,MDRMux,MDRWrite,StoreControl);
+module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite,PCSrc,ALUop,ALUSrcA,
+	ALUSrcB,RegWrite,RegDst,ALUout,AWrite,BWrite,MultCtrl,DivCtrl,MDRMux,MDRWrite,StoreControl,
+	PCWriteCond,ALUcond);
+	
 	input wire [5:0] opcode,func;
 	input wire clock;
-	output reg Reset,PCWrite,MemWrite,IRWrite,RegWrite,ALUout,AWrite,BWrite,MultCtrl,DivCtrl,MDRWrite;
+	output reg Reset,PCWrite,MemWrite,IRWrite,RegWrite,ALUout,AWrite,BWrite,MultCtrl,DivCtrl,MDRWrite,
+	PCWriteCond;
 	
-	output reg [1:0] ALUSrcA,RegDst,MDRMux,StoreControl;
+	output reg [1:0] ALUSrcA,RegDst,MDRMux,StoreControl,ALUcond;
 	output reg [2:0] IorD,PCSrc,ALUop,ALUSrcB;
 	output reg [3:0] MemToReg;
 	reg [6:0] Estado;
 	
 	//Estados
-	reg [6:0] Fetch,Wait1,InstRead,Wait2,OpcodeRead,WriteRegALU,WriteRegALU2,ResetS,CarregaByteMDR,
+	reg [6:0] Fetch,Wait1,InstRead,Branch,OpcodeRead,WriteRegALU,WriteRegALU2,ResetS,CarregaByteMDR,
 	EscreveMDRemRegistrador,Wait3,SolicitaDado1,SolicitaDado2,Wait4,CarregaWordMDR,SolicitaDado3,Wait5,
 	CarregaHalfWordMDR,EscreveMemoriaByte,EscreveMemoriaHalfWord,EscreveMemoriaWord;
 	//OpCodes
 	reg [5:0] ADDI = 6'd8, ADDIU = 6'd9, LB = 6'd32, LW = 6'd35, LH = 6'd33,SB = 6'd40, SH = 6'd41,
-	SW = 6'd43;
+	SW = 6'd43, BEQ = 6'd4;
 	
 	
 	// Funções
@@ -45,7 +49,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 		Fetch <= 7'd1;
 		Wait1 <= 7'd2;
 		InstRead <= 7'd3;
-		Wait2 <= 7'd4;
+		Branch <= 7'd4;
 		OpcodeRead <= 7'd5;
 		WriteRegALU <= 7'd6;
 		WriteRegALU2 <= 7'd7;
@@ -79,6 +83,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b1;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				PCSrc <= 3'b000;
 				ALUop <= 3'b001;
@@ -99,6 +104,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				ALUout <= 1'b0;
 				Estado <= InstRead;
@@ -112,19 +118,24 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
-				Estado <= Wait2;
+				Estado <= Branch;
 			end
-			Wait2: begin
+			Branch: begin //Offset + PC + 4
 				PCWrite <= 1'b0;
 				MemWrite <= 1'b0;
 				IRWrite <= 1'b0;
 				AWrite <= 1'b1;
 				BWrite <= 1'b1;
 				RegWrite <= 1'b0;
-				ALUout <= 1'b0;
+				ALUout <= 1'b1;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
+				ALUSrcA <= 2'b00;
+				ALUSrcB <= 3'b010;
+				ALUop <= 3'b001;
 				Estado <= OpcodeRead;			
 			end
 			WriteRegALU: begin //Carrea info do ALUout no Registrador
@@ -136,6 +147,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b1;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				MemToReg <= 4'b0000;
 				RegDst <= 2'b11;
@@ -150,6 +162,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b1;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				MemToReg <= 4'b0000;
 				RegDst <= 2'b00;
@@ -164,6 +177,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b1;
+				PCWriteCond <= 1'b0;
 				
 				MDRMux <= 2'b10;
 				Estado <= EscreveMDRemRegistrador;
@@ -177,6 +191,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b1;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				MemToReg <= 4'b0110;
 				RegDst <= 2'b00;
@@ -191,6 +206,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				Estado <= CarregaByteMDR;
 			end
@@ -203,6 +219,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				IorD <= 3'b101;
 				Estado <= Wait3;
@@ -216,6 +233,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				IorD <= 3'b101;
 				Estado <= Wait4;
@@ -229,6 +247,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				Estado <= CarregaWordMDR;
 			end
@@ -241,6 +260,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b1;
+				PCWriteCond <= 1'b0;
 				
 				MDRMux <= 2'b00;
 				Estado <= EscreveMDRemRegistrador;
@@ -254,6 +274,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				IorD <= 3'b101;
 				Estado <= Wait5;
@@ -267,6 +288,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				Estado <= CarregaHalfWordMDR;
 			end
@@ -279,6 +301,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b1;
+				PCWriteCond <= 1'b0;
 				
 				MDRMux <= 2'b01;
 				Estado <= EscreveMDRemRegistrador;
@@ -292,6 +315,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				IorD <= 3'b101;
 				StoreControl <= 2'b10;
@@ -299,13 +323,14 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 			end
 			EscreveMemoriaHalfWord: begin // Memory[ALUout] <= halfWord[B]
 				PCWrite <= 1'b0;
-				MemWrite <= 1'b0;
+				MemWrite <= 1'b1;
 				IRWrite <= 1'b0;
 				AWrite <= 1'b0;
 				BWrite <= 1'b0;
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
-				MDRWrite <= 1'b1;
+				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				IorD <= 3'b101;
 				StoreControl <= 2'b01;
@@ -313,13 +338,14 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 			end
 			EscreveMemoriaWord: begin // Memory[ALUout] <= word[B]
 				PCWrite <= 1'b0;
-				MemWrite <= 1'b0;
+				MemWrite <= 1'b1;
 				IRWrite <= 1'b0;
 				AWrite <= 1'b0;
 				BWrite <= 1'b0;
 				RegWrite <= 1'b0;
 				ALUout <= 1'b0;
-				MDRWrite <= 1'b1;
+				MDRWrite <= 1'b0;
+				PCWriteCond <= 1'b0;
 				
 				IorD <= 3'b101;
 				StoreControl <= 2'b00;
@@ -338,6 +364,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								RegWrite <= 1'b0;
 								ALUout <= 1'b1;
 								MDRWrite <= 1'b0;
+								PCWriteCond <= 1'b0;
 								
 								ALUop <= 3'b001;
 								ALUSrcA <= 2'b10;
@@ -353,6 +380,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								RegWrite <= 1'b0;
 								ALUout <= 1'b1;
 								MDRWrite <= 1'b0;
+								PCWriteCond <= 1'b0;
 								
 								ALUop <= 3'b010;
 								ALUSrcA <= 2'b10;
@@ -368,6 +396,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								RegWrite <= 1'b0;
 								ALUout <= 1'b1;
 								MDRWrite <= 1'b0;
+								PCWriteCond <= 1'b0;
 								
 								ALUop <= 3'b011;
 								ALUSrcA <= 2'b10;
@@ -385,6 +414,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						RegWrite <= 1'b0;
 						ALUout <= 1'b1;
 						MDRWrite <= 1'b0;
+						PCWriteCond <= 1'b0;
 								
 						RegDst <= 2'b00;
 						ALUop <= 3'b001;
@@ -401,6 +431,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						RegWrite <= 1'b0;
 						ALUout <= 1'b1;
 						MDRWrite <= 1'b0;
+						PCWriteCond <= 1'b0;
 								
 						ALUop <= 3'b001;
 						ALUSrcA <= 2'b10;
@@ -416,6 +447,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						RegWrite <= 1'b0;
 						ALUout <= 1'b1;
 						MDRWrite <= 1'b0;
+						PCWriteCond <= 1'b0;
 						
 						RegDst <= 2'b00;
 						ALUop <= 3'b001;
@@ -432,6 +464,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						RegWrite <= 1'b0;
 						ALUout <= 1'b1;
 						MDRWrite <= 1'b0;
+						PCWriteCond <= 1'b0;
 						
 						RegDst <= 2'b00;
 						ALUop <= 3'b001;
@@ -448,6 +481,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						RegWrite <= 1'b0;
 						ALUout <= 1'b1;
 						MDRWrite <= 1'b0;
+						PCWriteCond <= 1'b0;
 						
 						RegDst <= 2'b00;
 						ALUop <= 3'b001;
@@ -464,6 +498,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						RegWrite <= 1'b0;
 						ALUout <= 1'b1;
 						MDRWrite <= 1'b0;
+						PCWriteCond <= 1'b0;
 						
 						RegDst <= 2'b00;
 						ALUop <= 3'b001;
@@ -480,6 +515,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						RegWrite <= 1'b0;
 						ALUout <= 1'b1;
 						MDRWrite <= 1'b0;
+						PCWriteCond <= 1'b0;
 						
 						RegDst <= 2'b00;
 						ALUop <= 3'b001;
@@ -496,12 +532,85 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						RegWrite <= 1'b0;
 						ALUout <= 1'b1;
 						MDRWrite <= 1'b0;
+						PCWriteCond <= 1'b0;
 						
 						RegDst <= 2'b00;
 						ALUop <= 3'b001;
 						ALUSrcA <= 2'b10;
 						ALUSrcB <= 3'b010;
 						Estado <= EscreveMemoriaWord;
+					end
+					BEQ: begin // Verifica Condicional e escreve em PC
+						PCWrite <= 1'b0;
+						MemWrite <= 1'b0;
+						IRWrite <= 1'b0;
+						AWrite <= 1'b0;
+						BWrite <= 1'b0;
+						RegWrite <= 1'b0;
+						ALUout <= 1'b0;
+						MDRWrite <= 1'b0;
+						PCWriteCond <= 1'b1;
+						
+						ALUop <= 3'b111;
+						ALUSrcA <= 2'b10;
+						ALUSrcB <= 2'b000;
+						PCSrc <= 3'b000;
+						ALUcond <= 2'b11;
+						Estado <= Fetch;
+					end
+					BNE: begin // Verifica Condicional e escreve em PC
+						PCWrite <= 1'b0;
+						MemWrite <= 1'b0;
+						IRWrite <= 1'b0;
+						AWrite <= 1'b0;
+						BWrite <= 1'b0;
+						RegWrite <= 1'b0;
+						ALUout <= 1'b0;
+						MDRWrite <= 1'b0;
+						PCWriteCond <= 1'b1;
+						
+						ALUop <= 3'b111;
+						ALUSrcA <= 2'b10;
+						ALUSrcB <= 2'b000;
+						PCSrc <= 3'b000;
+						ALUcond <= 2'b10;
+						Estado <= Fetch;
+					end
+					BLE: begin // Verifica Condicional e escreve em PC
+						PCWrite <= 1'b0;
+						MemWrite <= 1'b0;
+						IRWrite <= 1'b0;
+						AWrite <= 1'b0;
+						BWrite <= 1'b0;
+						RegWrite <= 1'b0;
+						ALUout <= 1'b0;
+						MDRWrite <= 1'b0;
+						PCWriteCond <= 1'b1;
+						
+						ALUop <= 3'b111;
+						ALUSrcA <= 2'b10;
+						ALUSrcB <= 2'b000;
+						PCSrc <= 3'b000;
+						ALUcond <= 2'b00;
+						Estado <= Fetch;
+					end
+					BGT: begin //Verifica Condicional e escreve em PC
+						PCWrite <= 1'b0;
+						MemWrite <= 1'b0;
+						IRWrite <= 1'b0;
+						AWrite <= 1'b0;
+						BWrite <= 1'b0;
+						RegWrite <= 1'b0;
+						ALUout <= 1'b0;
+						MDRWrite <= 1'b0;
+						PCWriteCond <= 1'b1;
+						
+						ALUop <= 3'b111;
+						ALUSrcA <= 2'b10;
+						ALUSrcB <= 2'b000;
+						PCSrc <= 3'b000;
+						ALUcond <= 2'b01;
+						Estado <= Fetch;
 					end
 				endcase
 			end

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HW
-Thu May 16 08:07:29 2019
+Thu May 16 12:57:07 2019
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -14,16 +14,16 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. State Machine - |HW|Controler:inst15|Estado
+  9. State Machine - |HW|Controler:inst26|Estado
  10. User-Specified and Inferred Latches
  11. Registers Removed During Synthesis
  12. General Register Statistics
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated
- 16. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated
- 17. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated
- 18. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated
+ 15. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated
+ 16. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated
+ 17. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated
+ 18. Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated
  19. Parameter Settings for User Entity Instance: Memoria:inst2|LPM_RAM_DQ:MEM
  20. Parameter Settings for User Entity Instance: Memoria:inst2|LPM_RAM_DQ:MEM_plus_One
  21. Parameter Settings for User Entity Instance: Memoria:inst2|LPM_RAM_DQ:MEM_plus_Two
@@ -54,15 +54,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Thu May 16 08:07:29 2019        ;
+; Analysis & Synthesis Status   ; Successful - Thu May 16 12:57:07 2019        ;
 ; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                 ; HW                                           ;
 ; Top-level Entity Name         ; HW                                           ;
 ; Family                        ; Stratix II                                   ;
 ; Logic utilization             ; N/A                                          ;
-;     Combinational ALUTs       ; 1,123                                        ;
-;     Dedicated logic registers ; 1,257                                        ;
-; Total registers               ; 1257                                         ;
+;     Combinational ALUTs       ; 1,167                                        ;
+;     Dedicated logic registers ; 1,261                                        ;
+; Total registers               ; 1261                                         ;
 ; Total pins                    ; 129                                          ;
 ; Total virtual pins            ; 0                                            ;
 ; Total block memory bits       ; 8,192                                        ;
@@ -185,11 +185,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; MUXMDR.v                         ; yes             ; User Verilog HDL File              ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/MUXMDR.v               ;
 ; Extensor8_32.v                   ; yes             ; User Verilog HDL File              ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/Extensor8_32.v         ;
 ; StoreControl.v                   ; yes             ; User Verilog HDL File              ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/StoreControl.v         ;
-; SW.mif                           ; yes             ; User Memory Initialization File    ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/SW.mif                 ;
+; MuxALUcond.v                     ; yes             ; User Verilog HDL File              ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/MuxALUcond.v           ;
+; BGT.mif                          ; yes             ; User Memory Initialization File    ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/BGT.mif                ;
 ; lpm_ram_dq.tdf                   ; yes             ; Megafunction                       ; c:/program files/quartus/quartus/libraries/megafunctions/lpm_ram_dq.tdf                ;
 ; altram.tdf                       ; yes             ; Megafunction                       ; c:/program files/quartus/quartus/libraries/megafunctions/altram.tdf                    ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/program files/quartus/quartus/libraries/megafunctions/altsyncram.tdf                ;
-; db/altsyncram_b791.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/altsyncram_b791.tdf ;
+; db/altsyncram_u991.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/db/altsyncram_u991.tdf ;
 ; extensor16_32.v                  ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/User-PC/Desktop/Projeto HW/InfraHard/Final Project 1.0/extensor16_32.v        ;
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------+
 
@@ -199,39 +200,39 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+-------+
 ; Resource                                      ; Usage ;
 +-----------------------------------------------+-------+
-; Estimated ALUTs Used                          ; 1123  ;
-; Dedicated logic registers                     ; 1257  ;
+; Estimated ALUTs Used                          ; 1167  ;
+; Dedicated logic registers                     ; 1261  ;
 ;                                               ;       ;
-; Estimated ALUTs Unavailable                   ; 19    ;
+; Estimated ALUTs Unavailable                   ; 10    ;
 ;                                               ;       ;
-; Total combinational functions                 ; 1123  ;
+; Total combinational functions                 ; 1167  ;
 ; Combinational ALUT usage by number of inputs  ;       ;
-;     -- 7 input functions                      ; 14    ;
-;     -- 6 input functions                      ; 714   ;
-;     -- 5 input functions                      ; 61    ;
-;     -- 4 input functions                      ; 41    ;
-;     -- <=3 input functions                    ; 293   ;
+;     -- 7 input functions                      ; 10    ;
+;     -- 6 input functions                      ; 699   ;
+;     -- 5 input functions                      ; 75    ;
+;     -- 4 input functions                      ; 74    ;
+;     -- <=3 input functions                    ; 309   ;
 ;                                               ;       ;
 ; Combinational ALUTs by mode                   ;       ;
-;     -- normal mode                            ; 1086  ;
-;     -- extended LUT mode                      ; 14    ;
+;     -- normal mode                            ; 1134  ;
+;     -- extended LUT mode                      ; 10    ;
 ;     -- arithmetic mode                        ; 23    ;
 ;     -- shared arithmetic mode                 ; 0     ;
 ;                                               ;       ;
-; Estimated ALUT/register pairs used            ; 2078  ;
+; Estimated ALUT/register pairs used            ; 2091  ;
 ;                                               ;       ;
-; Total registers                               ; 1257  ;
-;     -- Dedicated logic registers              ; 1257  ;
+; Total registers                               ; 1261  ;
+;     -- Dedicated logic registers              ; 1261  ;
 ;     -- I/O registers                          ; 0     ;
 ;                                               ;       ;
-; Estimated ALMs:  partially or completely used ; 1,039 ;
+; Estimated ALMs:  partially or completely used ; 1,046 ;
 ;                                               ;       ;
 ; I/O pins                                      ; 129   ;
 ; Total block memory bits                       ; 8192  ;
 ; Maximum fan-out node                          ; CLK   ;
-; Maximum fan-out                               ; 1289  ;
-; Total fan-out                                 ; 11152 ;
-; Average fan-out                               ; 4.39  ;
+; Maximum fan-out                               ; 1293  ;
+; Total fan-out                                 ; 11395 ;
+; Average fan-out                               ; 4.40  ;
 +-----------------------------------------------+-------+
 
 
@@ -240,59 +241,59 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
-; |HW                                             ; 1123 (0)          ; 1257 (0)     ; 8192              ; 0            ; 0       ; 0         ; 0         ; 129  ; 0            ; |HW                                                                                                         ; work         ;
+; |HW                                             ; 1167 (4)          ; 1261 (0)     ; 8192              ; 0            ; 0       ; 0         ; 0         ; 129  ; 0            ; |HW                                                                                                         ; work         ;
 ;    |Banco_reg:inst6|                            ; 738 (738)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Banco_reg:inst6                                                                                         ; work         ;
-;    |Controler:inst15|                           ; 62 (62)           ; 41 (41)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Controler:inst15                                                                                        ; work         ;
+;    |Controler:inst26|                           ; 75 (75)           ; 45 (45)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Controler:inst26                                                                                        ; work         ;
 ;    |Instr_Reg:inst3|                            ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Instr_Reg:inst3                                                                                         ; work         ;
 ;    |MUXIorD:inst1|                              ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MUXIorD:inst1                                                                                           ; work         ;
 ;    |MUXMDR:inst16|                              ; 57 (57)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MUXMDR:inst16                                                                                           ; work         ;
 ;    |MUXMemToReg:inst5|                          ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MUXMemToReg:inst5                                                                                       ; work         ;
 ;    |MUXRegDst:inst4|                            ; 5 (5)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MUXRegDst:inst4                                                                                         ; work         ;
-;    |MUXUlaSourceB:inst13|                       ; 21 (21)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MUXUlaSourceB:inst13                                                                                    ; work         ;
+;    |MUXUlaSourceB:inst13|                       ; 14 (14)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MUXUlaSourceB:inst13                                                                                    ; work         ;
 ;    |Memoria:inst2|                              ; 23 (23)           ; 0 (0)        ; 8192              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2                                                                                           ;              ;
 ;       |lpm_ram_dq:MEM_plus_One|                 ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
 ;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ;              ;
 ;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block                                  ; work         ;
-;                |altsyncram_b791:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated   ;              ;
+;                |altsyncram_u991:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated   ;              ;
 ;       |lpm_ram_dq:MEM_plus_Three|               ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Three                                                                 ; work         ;
 ;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ; work         ;
 ;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block                                ; work         ;
-;                |altsyncram_b791:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated ; work         ;
+;                |altsyncram_u991:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated ; work         ;
 ;       |lpm_ram_dq:MEM_plus_Two|                 ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Two                                                                   ; work         ;
 ;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram                                                       ;              ;
 ;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block                                  ;              ;
-;                |altsyncram_b791:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated   ; work         ;
+;                |altsyncram_u991:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated   ; work         ;
 ;       |lpm_ram_dq:MEM|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM                                                                            ; work         ;
 ;          |altram:sram|                          ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM|altram:sram                                                                ;              ;
 ;             |altsyncram:ram_block|              ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block                                           ; work         ;
-;                |altsyncram_b791:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated            ;              ;
+;                |altsyncram_u991:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048              ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated            ;              ;
 ;    |MuxUlaSourceA:inst9|                        ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|MuxUlaSourceA:inst9                                                                                     ; work         ;
-;    |Registrador:inst12|                         ; 1 (1)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Registrador:inst12                                                                                      ; work         ;
+;    |Registrador:inst12|                         ; 2 (2)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Registrador:inst12                                                                                      ; work         ;
 ;    |Registrador:inst17|                         ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Registrador:inst17                                                                                      ; work         ;
 ;    |Registrador:inst7|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Registrador:inst7                                                                                       ; work         ;
 ;    |Registrador:inst8|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Registrador:inst8                                                                                       ; work         ;
 ;    |Registrador:inst|                           ; 0 (0)             ; 32 (32)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Registrador:inst                                                                                        ; work         ;
 ;    |StoreControl:inst11|                        ; 34 (34)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|StoreControl:inst11                                                                                     ; work         ;
-;    |Ula32:ULA|                                  ; 110 (110)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Ula32:ULA                                                                                               ; work         ;
+;    |Ula32:ULA|                                  ; 143 (143)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HW|Ula32:ULA                                                                                               ; work         ;
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                    ;
-+--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------+
-; Name                                                                                                               ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF    ;
-+--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------+
-; Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; SW.mif ;
-; Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; SW.mif ;
-; Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; SW.mif ;
-; Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated|ALTSYNCRAM            ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; SW.mif ;
-+--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+--------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                     ;
++--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------+
+; Name                                                                                                               ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF     ;
++--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------+
+; Memoria:inst2|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; BGT.mif ;
+; Memoria:inst2|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; BGT.mif ;
+; Memoria:inst2|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; BGT.mif ;
+; Memoria:inst2|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated|ALTSYNCRAM            ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; BGT.mif ;
++--------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+---------+
 
 
 Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |HW|Controler:inst15|Estado                                                                                                                                                                                                                                                                                                                                         ;
+; State Machine - |HW|Controler:inst26|Estado                                                                                                                                                                                                                                                                                                                                         ;
 +----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
 ; Name           ; Estado.0010100 ; Estado.0010011 ; Estado.0010010 ; Estado.0010001 ; Estado.0010000 ; Estado.0001111 ; Estado.0001110 ; Estado.0001101 ; Estado.0001100 ; Estado.0001011 ; Estado.0001010 ; Estado.0001001 ; Estado.0001000 ; Estado.0000111 ; Estado.0000110 ; Estado.0000101 ; Estado.0000100 ; Estado.0000011 ; Estado.0000010 ; Estado.0000001 ; Estado.0000000 ;
 +----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
@@ -341,14 +342,14 @@ Encoding Type:  One-Hot
 ; StoreControl:inst11|Output[18]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
 ; StoreControl:inst11|Output[17]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
 ; StoreControl:inst11|Output[16]                      ; StoreControl:inst11|Decoder0     ; yes                    ;
-; StoreControl:inst11|Output[15]                      ; Controler:inst15|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[14]                      ; Controler:inst15|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[13]                      ; Controler:inst15|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[12]                      ; Controler:inst15|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[11]                      ; Controler:inst15|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[10]                      ; Controler:inst15|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[9]                       ; Controler:inst15|StoreControl[1] ; yes                    ;
-; StoreControl:inst11|Output[8]                       ; Controler:inst15|StoreControl[1] ; yes                    ;
+; StoreControl:inst11|Output[15]                      ; Controler:inst26|StoreControl[1] ; yes                    ;
+; StoreControl:inst11|Output[14]                      ; Controler:inst26|StoreControl[1] ; yes                    ;
+; StoreControl:inst11|Output[13]                      ; Controler:inst26|StoreControl[1] ; yes                    ;
+; StoreControl:inst11|Output[12]                      ; Controler:inst26|StoreControl[1] ; yes                    ;
+; StoreControl:inst11|Output[11]                      ; Controler:inst26|StoreControl[1] ; yes                    ;
+; StoreControl:inst11|Output[10]                      ; Controler:inst26|StoreControl[1] ; yes                    ;
+; StoreControl:inst11|Output[9]                       ; Controler:inst26|StoreControl[1] ; yes                    ;
+; StoreControl:inst11|Output[8]                       ; Controler:inst26|StoreControl[1] ; yes                    ;
 ; StoreControl:inst11|Output[7]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
 ; StoreControl:inst11|Output[6]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
 ; StoreControl:inst11|Output[5]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
@@ -357,6 +358,39 @@ Encoding Type:  One-Hot
 ; StoreControl:inst11|Output[2]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
 ; StoreControl:inst11|Output[1]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
 ; StoreControl:inst11|Output[0]                       ; StoreControl:inst11|Decoder0     ; yes                    ;
+; PCSrc:inst10|Out[31]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[30]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[29]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[28]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[27]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[26]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[25]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[24]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[23]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[22]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[21]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[20]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[19]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[18]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[17]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[16]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[15]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[14]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[13]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[12]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[11]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[10]                                ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[9]                                 ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[8]                                 ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[7]                                 ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[6]                                 ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[5]                                 ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[4]                                 ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[3]                                 ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[2]                                 ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[1]                                 ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; PCSrc:inst10|Out[0]                                 ; Controler:inst26|PCSrc[0]        ; yes                    ;
+; MUXMDR:inst16|Out[31]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
 ; MUXMDR:inst16|Out[0]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
 ; MUXMDR:inst16|Out[1]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
 ; MUXMDR:inst16|Out[2]                                ; MUXMDR:inst16|Mux32              ; yes                    ;
@@ -388,8 +422,7 @@ Encoding Type:  One-Hot
 ; MUXMDR:inst16|Out[28]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
 ; MUXMDR:inst16|Out[29]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
 ; MUXMDR:inst16|Out[30]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; MUXMDR:inst16|Out[31]                               ; MUXMDR:inst16|Mux32              ; yes                    ;
-; Number of user-specified and inferred latches = 64  ;                                  ;                        ;
+; Number of user-specified and inferred latches = 96  ;                                  ;                        ;
 +-----------------------------------------------------+----------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -399,24 +432,24 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+------------------------------------------+
 ; Register name                          ; Reason for Removal                       ;
 +----------------------------------------+------------------------------------------+
-; Controler:inst15|MemToReg[0,3]         ; Stuck at GND due to stuck port data_in   ;
-; Controler:inst15|IorD[1]               ; Stuck at GND due to stuck port data_in   ;
-; Controler:inst15|IorD[2]               ; Stuck at VCC due to stuck port data_in   ;
-; Controler:inst15|PCSrc[0..2]           ; Stuck at GND due to stuck port data_in   ;
-; Controler:inst15|RegDst[1]             ; Merged with Controler:inst15|RegDst[0]   ;
-; Controler:inst15|MemToReg[2]           ; Merged with Controler:inst15|MemToReg[1] ;
-; Controler:inst15|ALUSrcA[0]            ; Merged with Controler:inst15|ALUSrcB[2]  ;
-; Controler:inst15|ALUop[2]              ; Merged with Controler:inst15|ALUSrcB[2]  ;
-; Controler:inst15|AWrite                ; Merged with Controler:inst15|BWrite      ;
-; Controler:inst15|ALUSrcB[2]            ; Stuck at GND due to stuck port data_in   ;
-; Controler:inst15|Estado~23             ; Lost fanout                              ;
-; Controler:inst15|Estado~24             ; Lost fanout                              ;
-; Controler:inst15|Estado~25             ; Lost fanout                              ;
-; Controler:inst15|Estado~26             ; Lost fanout                              ;
-; Controler:inst15|Estado~27             ; Lost fanout                              ;
-; Controler:inst15|Estado~28             ; Lost fanout                              ;
-; Controler:inst15|Estado~29             ; Lost fanout                              ;
-; Total Number of Removed Registers = 20 ;                                          ;
+; Controler:inst26|MemToReg[0,3]         ; Stuck at GND due to stuck port data_in   ;
+; Controler:inst26|IorD[1]               ; Stuck at GND due to stuck port data_in   ;
+; Controler:inst26|IorD[2]               ; Stuck at VCC due to stuck port data_in   ;
+; Controler:inst26|RegDst[1]             ; Merged with Controler:inst26|RegDst[0]   ;
+; Controler:inst26|MemToReg[2]           ; Merged with Controler:inst26|MemToReg[1] ;
+; Controler:inst26|ALUSrcA[0]            ; Merged with Controler:inst26|ALUSrcB[2]  ;
+; Controler:inst26|PCSrc[1..2]           ; Merged with Controler:inst26|PCSrc[0]    ;
+; Controler:inst26|AWrite                ; Merged with Controler:inst26|BWrite      ;
+; Controler:inst26|ALUSrcB[2]            ; Stuck at GND due to stuck port data_in   ;
+; Controler:inst26|Estado~23             ; Lost fanout                              ;
+; Controler:inst26|Estado~24             ; Lost fanout                              ;
+; Controler:inst26|Estado~25             ; Lost fanout                              ;
+; Controler:inst26|Estado~26             ; Lost fanout                              ;
+; Controler:inst26|Estado~27             ; Lost fanout                              ;
+; Controler:inst26|Estado~28             ; Lost fanout                              ;
+; Controler:inst26|Estado~29             ; Lost fanout                              ;
+; Controler:inst26|PCSrc[0]              ; Stuck at GND due to stuck port data_in   ;
+; Total Number of Removed Registers = 19 ;                                          ;
 +----------------------------------------+------------------------------------------+
 
 
@@ -425,12 +458,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1257  ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 1261  ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 1216  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1224  ;
+; Number of registers using Clock Enable       ; 1226  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -451,24 +484,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; 8:1                ; 32 bits   ; 160 ALUTs     ; 96 ALUTs             ; 64 ALUTs               ; Yes        ; |HW|Registrador:inst12|Saida[19] ;
-; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; Yes        ; |HW|Registrador:inst7|Saida[27]  ;
-; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; Yes        ; |HW|Registrador:inst8|Saida[28]  ;
-; 1:1                ; 8 bits    ; 0 ALUTs       ; 0 ALUTs              ; 0 ALUTs                ; No         ; |HW|MUXMDR:inst16|Mux1           ;
-; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |HW|MuxUlaSourceA:inst9|Mux20    ;
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |HW|MUXMDR:inst16|Mux31          ;
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; No         ; |HW|MUXMDR:inst16|Mux8           ;
-; 8:1                ; 32 bits   ; 160 ALUTs     ; 64 ALUTs             ; 96 ALUTs               ; No         ; |HW|Ula32:ULA|Mux34              ;
-; 5:1                ; 16 bits   ; 48 ALUTs      ; 32 ALUTs             ; 16 ALUTs               ; No         ; |HW|MUXUlaSourceB:inst13|Mux31   ;
-; 5:1                ; 16 bits   ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |HW|MUXUlaSourceB:inst13|Mux10   ;
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |HW|Controler:inst15|Selector13  ;
-; 10:1               ; 7 bits    ; 42 ALUTs      ; 42 ALUTs             ; 0 ALUTs                ; No         ; |HW|Controler:inst15|Selector30  ;
-; 14:1               ; 12 bits   ; 108 ALUTs     ; 108 ALUTs            ; 0 ALUTs                ; No         ; |HW|Controler:inst15|Selector50  ;
+; 8:1                ; 32 bits   ; 160 ALUTs     ; 64 ALUTs             ; 96 ALUTs               ; Yes        ; |HW|Registrador:inst12|Saida[26] ;
+; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; Yes        ; |HW|Registrador:inst7|Saida[25]  ;
+; 32:1               ; 32 bits   ; 672 ALUTs     ; 672 ALUTs            ; 0 ALUTs                ; Yes        ; |HW|Registrador:inst8|Saida[12]  ;
+; 1:1                ; 32 bits   ; 0 ALUTs       ; 0 ALUTs              ; 0 ALUTs                ; No         ; |HW|PCSrc:inst10|Mux21           ;
+; 1:1                ; 8 bits    ; 0 ALUTs       ; 0 ALUTs              ; 0 ALUTs                ; No         ; |HW|MUXMDR:inst16|Mux6           ;
+; 3:1                ; 32 bits   ; 64 ALUTs      ; 64 ALUTs             ; 0 ALUTs                ; No         ; |HW|MuxUlaSourceA:inst9|Mux13    ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |HW|MUXMDR:inst16|Mux17          ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; No         ; |HW|MUXMDR:inst16|Mux13          ;
+; 8:1                ; 32 bits   ; 160 ALUTs     ; 64 ALUTs             ; 96 ALUTs               ; No         ; |HW|Ula32:ULA|Mux62              ;
+; 5:1                ; 16 bits   ; 48 ALUTs      ; 32 ALUTs             ; 16 ALUTs               ; No         ; |HW|MUXUlaSourceB:inst13|Mux20   ;
+; 5:1                ; 16 bits   ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |HW|MUXUlaSourceB:inst13|Mux14   ;
+; 5:1                ; 2 bits    ; 6 ALUTs       ; 4 ALUTs              ; 2 ALUTs                ; No         ; |HW|Controler:inst26|Selector11  ;
+; 11:1               ; 7 bits    ; 49 ALUTs      ; 42 ALUTs             ; 7 ALUTs                ; No         ; |HW|Controler:inst26|Selector39  ;
+; 14:1               ; 11 bits   ; 99 ALUTs      ; 99 ALUTs             ; 0 ALUTs                ; No         ; |HW|Controler:inst26|Selector53  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated ;
+; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated ;
 +---------------------------------+--------------------+------+-------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                    ;
 +---------------------------------+--------------------+------+-------------------------------------------------------+
@@ -477,7 +511,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated ;
+; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                             ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------+
@@ -486,7 +520,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated ;
+; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                             ;
 +---------------------------------+--------------------+------+----------------------------------------------------------------+
@@ -495,7 +529,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +--------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated ;
+; Source assignments for Memoria:inst2|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                               ;
 +---------------------------------+--------------------+------+------------------------------------------------------------------+
@@ -514,7 +548,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; LPM_INDATA             ; REGISTERED ; Untyped                             ;
 ; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                             ;
 ; LPM_OUTDATA            ; REGISTERED ; Untyped                             ;
-; LPM_FILE               ; SW.mif     ; Untyped                             ;
+; LPM_FILE               ; BGT.mif    ; Untyped                             ;
 ; USE_EAB                ; ON         ; Untyped                             ;
 ; DEVICE_FAMILY          ; Stratix II ; Untyped                             ;
 ; CBXI_PARAMETER         ; NOTHING    ; Untyped                             ;
@@ -537,7 +571,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_INDATA             ; REGISTERED ; Untyped                                      ;
 ; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                                      ;
 ; LPM_OUTDATA            ; REGISTERED ; Untyped                                      ;
-; LPM_FILE               ; SW.mif     ; Untyped                                      ;
+; LPM_FILE               ; BGT.mif    ; Untyped                                      ;
 ; USE_EAB                ; ON         ; Untyped                                      ;
 ; DEVICE_FAMILY          ; Stratix II ; Untyped                                      ;
 ; CBXI_PARAMETER         ; NOTHING    ; Untyped                                      ;
@@ -560,7 +594,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_INDATA             ; REGISTERED ; Untyped                                      ;
 ; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                                      ;
 ; LPM_OUTDATA            ; REGISTERED ; Untyped                                      ;
-; LPM_FILE               ; SW.mif     ; Untyped                                      ;
+; LPM_FILE               ; BGT.mif    ; Untyped                                      ;
 ; USE_EAB                ; ON         ; Untyped                                      ;
 ; DEVICE_FAMILY          ; Stratix II ; Untyped                                      ;
 ; CBXI_PARAMETER         ; NOTHING    ; Untyped                                      ;
@@ -583,7 +617,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_INDATA             ; REGISTERED ; Untyped                                        ;
 ; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                                        ;
 ; LPM_OUTDATA            ; REGISTERED ; Untyped                                        ;
-; LPM_FILE               ; SW.mif     ; Untyped                                        ;
+; LPM_FILE               ; BGT.mif    ; Untyped                                        ;
 ; USE_EAB                ; ON         ; Untyped                                        ;
 ; DEVICE_FAMILY          ; Stratix II ; Untyped                                        ;
 ; CBXI_PARAMETER         ; NOTHING    ; Untyped                                        ;
@@ -601,7 +635,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu May 16 08:06:58 2019
+    Info: Processing started: Thu May 16 12:56:35 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HW -c HW
 Info: Found 1 design units, including 1 entities, in source file ulasourceb.v
     Info: Found entity 1: MUXUlaSourceB
@@ -647,6 +681,8 @@ Info: Found 1 design units, including 1 entities, in source file extensor8_32.v
     Info: Found entity 1: Extensor8_32
 Info: Found 1 design units, including 1 entities, in source file storecontrol.v
     Info: Found entity 1: StoreControl
+Info: Found 1 design units, including 1 entities, in source file muxalucond.v
+    Info: Found entity 1: ALUcond
 Info: Elaborating entity "HW" for the top level hierarchy
 Info: Elaborating entity "Memoria" for hierarchy "Memoria:inst2"
 Info: Elaborating entity "LPM_RAM_DQ" for hierarchy "Memoria:inst2|LPM_RAM_DQ:MEM"
@@ -658,7 +694,7 @@ Info: Instantiated megafunction "Memoria:inst2|LPM_RAM_DQ:MEM" with the followin
     Info: Parameter "LPM_INDATA" = "REGISTERED"
     Info: Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
     Info: Parameter "LPM_OUTDATA" = "REGISTERED"
-    Info: Parameter "LPM_FILE" = "SW.mif"
+    Info: Parameter "LPM_FILE" = "BGT.mif"
     Info: Parameter "LPM_TYPE" = "LPM_RAM_DQ"
     Info: Parameter "USE_EAB" = "ON"
     Info: Parameter "INTENDED_DEVICE_FAMILY" = "UNUSED"
@@ -668,16 +704,16 @@ Warning: Assertion warning: altram does not support Stratix II device family -- 
 Info: Elaborated megafunction instantiation "Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram", which is child of megafunction instantiation "Memoria:inst2|LPM_RAM_DQ:MEM"
 Info: Elaborating entity "altsyncram" for hierarchy "Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block"
 Info: Elaborated megafunction instantiation "Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block", which is child of megafunction instantiation "Memoria:inst2|LPM_RAM_DQ:MEM"
-Info: Found 1 design units, including 1 entities, in source file db/altsyncram_b791.tdf
-    Info: Found entity 1: altsyncram_b791
-Info: Elaborating entity "altsyncram_b791" for hierarchy "Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_b791:auto_generated"
-Critical Warning: Memory depth (256) in the design file differs from memory depth (8) in the Memory Initialization File "SW.mif" -- setting initial value for remaining addresses to 0
-Info: Elaborating entity "Controler" for hierarchy "Controler:inst15"
-Warning (10763): Verilog HDL warning at Control.v(331): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10763): Verilog HDL warning at Control.v(329): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10763): Verilog HDL warning at Control.v(68): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10034): Output port "MultCtrl" at Control.v(4) has no driver
-Warning (10034): Output port "DivCtrl" at Control.v(4) has no driver
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_u991.tdf
+    Info: Found entity 1: altsyncram_u991
+Info: Elaborating entity "altsyncram_u991" for hierarchy "Memoria:inst2|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_u991:auto_generated"
+Critical Warning: Memory depth (256) in the design file differs from memory depth (20) in the Memory Initialization File "BGT.mif" -- setting initial value for remaining addresses to 0
+Info: Elaborating entity "Controler" for hierarchy "Controler:inst26"
+Warning (10763): Verilog HDL warning at Control.v(357): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10763): Verilog HDL warning at Control.v(355): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10763): Verilog HDL warning at Control.v(72): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10034): Output port "MultCtrl" at Control.v(7) has no driver
+Warning (10034): Output port "DivCtrl" at Control.v(7) has no driver
 Info: Elaborating entity "Instr_Reg" for hierarchy "Instr_Reg:inst3"
 Info: Elaborating entity "MUXIorD" for hierarchy "MUXIorD:inst1"
 Warning (10270): Verilog HDL Case Statement warning at IorD.v(8): incomplete case statement has no default case item
@@ -715,41 +751,7 @@ Info (10041): Inferred latch for "Out[29]" at IorD.v(8)
 Info (10041): Inferred latch for "Out[30]" at IorD.v(8)
 Info (10041): Inferred latch for "Out[31]" at IorD.v(8)
 Info: Elaborating entity "Registrador" for hierarchy "Registrador:inst"
-Info: Elaborating entity "PCSrc" for hierarchy "PCSrc:inst10"
-Warning (10270): Verilog HDL Case Statement warning at PCSrc.v(8): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at PCSrc.v(8): inferring latch(es) for variable "Out", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "Out[0]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[1]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[2]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[3]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[4]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[5]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[6]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[7]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[8]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[9]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[10]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[11]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[12]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[13]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[14]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[15]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[16]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[17]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[18]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[19]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[20]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[21]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[22]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[23]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[24]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[25]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[26]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[27]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[28]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[29]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[30]" at PCSrc.v(8)
-Info (10041): Inferred latch for "Out[31]" at PCSrc.v(8)
+Info: Elaborating entity "ALUcond" for hierarchy "ALUcond:inst28"
 Info: Elaborating entity "Ula32" for hierarchy "Ula32:ULA"
 Info: Elaborating entity "MuxUlaSourceA" for hierarchy "MuxUlaSourceA:inst9"
 Warning (10270): Verilog HDL Case Statement warning at MUXUlaSourceA.v(8): incomplete case statement has no default case item
@@ -900,6 +902,41 @@ Info (10041): Inferred latch for "Out[28]" at UlaSourceB.v(8)
 Info (10041): Inferred latch for "Out[29]" at UlaSourceB.v(8)
 Info (10041): Inferred latch for "Out[30]" at UlaSourceB.v(8)
 Info (10041): Inferred latch for "Out[31]" at UlaSourceB.v(8)
+Info: Elaborating entity "PCSrc" for hierarchy "PCSrc:inst10"
+Warning (10270): Verilog HDL Case Statement warning at PCSrc.v(8): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at PCSrc.v(8): inferring latch(es) for variable "Out", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Out[0]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[1]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[2]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[3]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[4]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[5]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[6]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[7]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[8]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[9]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[10]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[11]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[12]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[13]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[14]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[15]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[16]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[17]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[18]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[19]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[20]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[21]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[22]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[23]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[24]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[25]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[26]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[27]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[28]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[29]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[30]" at PCSrc.v(8)
+Info (10041): Inferred latch for "Out[31]" at PCSrc.v(8)
 Info: Elaborating entity "StoreControl" for hierarchy "StoreControl:inst11"
 Warning (10270): Verilog HDL Case Statement warning at StoreControl.v(8): incomplete case statement has no default case item
 Warning (10240): Verilog HDL Always Construct warning at StoreControl.v(8): inferring latch(es) for variable "Output", which holds its previous value in one or more paths through the always construct
@@ -936,38 +973,6 @@ Info (10041): Inferred latch for "Output[29]" at StoreControl.v(8)
 Info (10041): Inferred latch for "Output[30]" at StoreControl.v(8)
 Info (10041): Inferred latch for "Output[31]" at StoreControl.v(8)
 Info: Elaborating entity "Mult" for hierarchy "Mult:inst14"
-Warning: LATCH primitive "PCSrc:inst10|Out[0]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[1]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[2]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[3]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[4]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[5]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[6]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[7]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[8]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[9]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[10]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[11]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[12]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[13]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[14]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[15]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[16]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[17]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[18]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[19]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[20]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[21]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[22]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[23]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[24]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[25]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[26]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[27]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[28]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[29]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[30]" is permanently enabled
-Warning: LATCH primitive "PCSrc:inst10|Out[31]" is permanently enabled
 Warning: LATCH primitive "MUXMemToReg:inst5|Out[0]" is permanently enabled
 Warning: LATCH primitive "MUXMemToReg:inst5|Out[1]" is permanently enabled
 Warning: LATCH primitive "MUXMemToReg:inst5|Out[2]" is permanently enabled
@@ -1112,72 +1117,104 @@ Warning: LATCH primitive "MUXUlaSourceB:inst13|Out[27]" is permanently enabled
 Warning: LATCH primitive "MUXUlaSourceB:inst13|Out[28]" is permanently enabled
 Warning: LATCH primitive "MUXUlaSourceB:inst13|Out[29]" is permanently enabled
 Warning: LATCH primitive "MUXUlaSourceB:inst13|Out[30]" is permanently enabled
-Warning: Latch MUXMDR:inst16|Out[8] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[1]
-Warning: Latch MUXMDR:inst16|Out[9] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[1]
-Warning: Latch MUXMDR:inst16|Out[10] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[1]
-Warning: Latch MUXMDR:inst16|Out[11] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[1]
-Warning: Latch MUXMDR:inst16|Out[12] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[1]
-Warning: Latch MUXMDR:inst16|Out[13] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[1]
-Warning: Latch MUXMDR:inst16|Out[14] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[1]
-Warning: Latch MUXMDR:inst16|Out[15] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[1]
-Warning: Latch MUXMDR:inst16|Out[16] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[17] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[18] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[19] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[20] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[21] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[22] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[23] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[24] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[25] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[26] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[27] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[28] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[29] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
-Warning: Latch MUXMDR:inst16|Out[30] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
 Warning: Latch MUXMDR:inst16|Out[31] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst15|MDRMux[0]
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[8] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[1]
+Warning: Latch MUXMDR:inst16|Out[9] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[1]
+Warning: Latch MUXMDR:inst16|Out[10] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[1]
+Warning: Latch MUXMDR:inst16|Out[11] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[1]
+Warning: Latch MUXMDR:inst16|Out[12] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[1]
+Warning: Latch MUXMDR:inst16|Out[13] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[1]
+Warning: Latch MUXMDR:inst16|Out[14] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[1]
+Warning: Latch MUXMDR:inst16|Out[15] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[1]
+Warning: Latch MUXMDR:inst16|Out[16] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[17] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[18] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[19] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[20] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[21] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[22] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[23] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[24] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[25] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[26] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[27] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[28] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[29] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: Latch MUXMDR:inst16|Out[30] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Controler:inst26|MDRMux[0]
+Warning: LATCH primitive "PCSrc:inst10|Out[31]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[30]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[29]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[28]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[27]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[26]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[25]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[24]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[23]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[22]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[21]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[20]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[19]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[18]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[17]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[16]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[15]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[14]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[13]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[12]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[11]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[10]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[9]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[8]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[7]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[6]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[5]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[4]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[3]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[2]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[1]" is permanently enabled
+Warning: LATCH primitive "PCSrc:inst10|Out[0]" is permanently enabled
 Info: Registers with preset signals will power-up high
 Info: 7 registers lost all their fanouts during netlist optimizations. The first 7 are displayed below.
-    Info: Register "Controler:inst15|Estado~23" lost all its fanouts during netlist optimizations.
-    Info: Register "Controler:inst15|Estado~24" lost all its fanouts during netlist optimizations.
-    Info: Register "Controler:inst15|Estado~25" lost all its fanouts during netlist optimizations.
-    Info: Register "Controler:inst15|Estado~26" lost all its fanouts during netlist optimizations.
-    Info: Register "Controler:inst15|Estado~27" lost all its fanouts during netlist optimizations.
-    Info: Register "Controler:inst15|Estado~28" lost all its fanouts during netlist optimizations.
-    Info: Register "Controler:inst15|Estado~29" lost all its fanouts during netlist optimizations.
-Info: Implemented 2412 device resources after synthesis - the final resource count might be different
+    Info: Register "Controler:inst26|Estado~23" lost all its fanouts during netlist optimizations.
+    Info: Register "Controler:inst26|Estado~24" lost all its fanouts during netlist optimizations.
+    Info: Register "Controler:inst26|Estado~25" lost all its fanouts during netlist optimizations.
+    Info: Register "Controler:inst26|Estado~26" lost all its fanouts during netlist optimizations.
+    Info: Register "Controler:inst26|Estado~27" lost all its fanouts during netlist optimizations.
+    Info: Register "Controler:inst26|Estado~28" lost all its fanouts during netlist optimizations.
+    Info: Register "Controler:inst26|Estado~29" lost all its fanouts during netlist optimizations.
+Info: Implemented 2456 device resources after synthesis - the final resource count might be different
     Info: Implemented 1 input pins
     Info: Implemented 128 output pins
-    Info: Implemented 2251 logic cells
+    Info: Implemented 2295 logic cells
     Info: Implemented 32 RAM segments
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 250 warnings
     Info: Peak virtual memory: 265 megabytes
-    Info: Processing ended: Thu May 16 08:07:29 2019
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:37
+    Info: Processing ended: Thu May 16 12:57:07 2019
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:38
 
 
