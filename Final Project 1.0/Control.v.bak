@@ -1,9 +1,9 @@
-module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite,PCSrc,ALUop,ALUSrcA,ALUSrcB,RegWrite,RegDst,ALUout,AWrite,BWrite,MultCtrl,DivCtrl,MDRMux,MDRWrite);
+module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite,PCSrc,ALUop,ALUSrcA,ALUSrcB,RegWrite,RegDst,ALUout,AWrite,BWrite,MultCtrl,DivCtrl,MDRMux,MDRWrite,StoreControl);
 	input wire [5:0] opcode,func;
 	input wire clock;
 	output reg Reset,PCWrite,MemWrite,IRWrite,RegWrite,ALUout,AWrite,BWrite,MultCtrl,DivCtrl,MDRWrite;
 	
-	output reg [1:0] ALUSrcA,RegDst,MDRMux;
+	output reg [1:0] ALUSrcA,RegDst,MDRMux,StoreControl;
 	output reg [2:0] IorD,PCSrc,ALUop,ALUSrcB;
 	output reg [3:0] MemToReg;
 	reg [6:0] Estado;
@@ -11,9 +11,10 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 	//Estados
 	reg [6:0] Fetch,Wait1,InstRead,Wait2,OpcodeRead,WriteRegALU,WriteRegALU2,ResetS,CarregaByteMDR,
 	EscreveMDRemRegistrador,Wait3,SolicitaDado1,SolicitaDado2,Wait4,CarregaWordMDR,SolicitaDado3,Wait5,
-	CarregaHalfWordMDR;
+	CarregaHalfWordMDR,EscreveMemoriaByte,EscreveMemoriaHalfWord,EscreveMemoriaWord;
 	//OpCodes
-	reg [5:0] ADDI = 6'd8, ADDIU = 6'd9, LB = 6'd32, LW = 6'd35, LH = 6'd33;
+	reg [5:0] ADDI = 6'd8, ADDIU = 6'd9, LB = 6'd32, LW = 6'd35, LH = 6'd33,SB = 6'd40, SH = 6'd41,
+	SW = 6'd43;
 	
 	
 	// Funções
@@ -55,6 +56,12 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 		SolicitaDado2 <= 7'd12;
 		Wait4 <= 7'd13;
 		CarregaWordMDR <= 7'd14;
+		SolicitaDado3 <= 7'd15;
+		Wait5 <= 7'd16;
+		CarregaHalfWordMDR <= 7'd17;
+		EscreveMemoriaByte <= 7'd18;
+		EscreveMemoriaHalfWord <= 7'd19;
+		EscreveMemoriaWord <= 7'd20;
 	end
 		
 	always @(posedge clock) begin
@@ -263,7 +270,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				
 				Estado <= CarregaHalfWordMDR;
 			end
-			CarregaHalfWordMDR: begin
+			CarregaHalfWordMDR: begin //Carrega Memory Data com dado da Memoria
 				PCWrite <= 1'b0;
 				MemWrite <= 1'b0;
 				IRWrite <= 1'b0;
@@ -275,6 +282,48 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				
 				MDRMux <= 2'b01;
 				Estado <= EscreveMDRemRegistrador;
+			end
+			EscreveMemoriaByte: begin //Memory[ALUout] <= byte[B]
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b1;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				MDRWrite <= 1'b0;
+				
+				IorD <= 3'b101;
+				StoreControl <= 2'b10;
+				Estado <= Fetch;
+			end
+			EscreveMemoriaHalfWord: begin // Memory[ALUout] <= halfWord[B]
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				MDRWrite <= 1'b1;
+				
+				IorD <= 3'b101;
+				StoreControl <= 2'b01;
+				Estado <= Fetch;
+			end
+			EscreveMemoriaWord: begin // Memory[ALUout] <= word[B]
+				PCWrite <= 1'b0;
+				MemWrite <= 1'b0;
+				IRWrite <= 1'b0;
+				AWrite <= 1'b0;
+				BWrite <= 1'b0;
+				RegWrite <= 1'b0;
+				ALUout <= 1'b0;
+				MDRWrite <= 1'b1;
+				
+				IorD <= 3'b101;
+				StoreControl <= 2'b00;
+				Estado <= Fetch;
 			end
 			OpcodeRead: begin
 				case(opcode)
@@ -405,6 +454,54 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						ALUSrcA <= 2'b10;
 						ALUSrcB <= 3'b010;
 						Estado <= SolicitaDado3;
+					end
+					SB: begin //Offset + RS
+						PCWrite <= 1'b0;
+						MemWrite <= 1'b0;
+						IRWrite <= 1'b0;
+						AWrite <= 1'b0;
+						BWrite <= 1'b0;
+						RegWrite <= 1'b0;
+						ALUout <= 1'b1;
+						MDRWrite <= 1'b0;
+						
+						RegDst <= 2'b00;
+						ALUop <= 3'b001;
+						ALUSrcA <= 2'b10;
+						ALUSrcB <= 3'b010;
+						Estado <= EscreveMemoriaByte;
+					end
+					SH: begin //Offset + RS
+						PCWrite <= 1'b0;
+						MemWrite <= 1'b0;
+						IRWrite <= 1'b0;
+						AWrite <= 1'b0;
+						BWrite <= 1'b0;
+						RegWrite <= 1'b0;
+						ALUout <= 1'b1;
+						MDRWrite <= 1'b0;
+						
+						RegDst <= 2'b00;
+						ALUop <= 3'b001;
+						ALUSrcA <= 2'b10;
+						ALUSrcB <= 3'b010;
+						Estado <= EscreveMemoriaHalfWord;
+					end
+					SW: begin //Offset + RS
+						PCWrite <= 1'b0;
+						MemWrite <= 1'b0;
+						IRWrite <= 1'b0;
+						AWrite <= 1'b0;
+						BWrite <= 1'b0;
+						RegWrite <= 1'b0;
+						ALUout <= 1'b1;
+						MDRWrite <= 1'b0;
+						
+						RegDst <= 2'b00;
+						ALUop <= 3'b001;
+						ALUSrcA <= 2'b10;
+						ALUSrcB <= 3'b010;
+						Estado <= EscreveMemoriaWord;
 					end
 				endcase
 			end
