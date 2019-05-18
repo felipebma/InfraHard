@@ -1,22 +1,23 @@
 module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite,PCSrc,ALUop,ALUSrcA,
 	ALUSrcB,RegWrite,RegDst,ALUout,AWrite,BWrite,MultCtrl,DivCtrl,MDRMux,MDRWrite,StoreControl,
-	PCWriteCond,ALUcond,Shift,RDn,RDx);
+	PCWriteCond,ALUcond,Shift,RDn,RDx,MultCtrl,DivCtrl, HiLoCtrl, MultDivSel, EPCWrite);
 	
 	input wire [5:0] opcode,func;
 	input wire clock;
 	output reg Reset,PCWrite,MemWrite,IRWrite,RegWrite,ALUout,AWrite,BWrite,MultCtrl,DivCtrl,MDRWrite,
-	PCWriteCond,RDn,RDx;
+	PCWriteCond,RDn,RDx, HiLoCtrl, MultDivSel, EPCWrite;
 	
 	output reg [1:0] ALUSrcA,RegDst,MDRMux,StoreControl,ALUcond;
 	output reg [2:0] IorD,PCSrc,ALUop,ALUSrcB,Shift;
 	output reg [3:0] MemToReg;
-	reg [6:0] Estado;
+	reg [6:0] Estado, counter;
+	reg Div0;
 	
 	//Estados
 	reg [6:0] Fetch,Wait1,InstRead,Branch,OpcodeRead,WriteRegALU,WriteRegALU2,ResetS,CarregaByteMDR,
 	EscreveMDRemRegistrador,Wait3,SolicitaDado1,SolicitaDado2,Wait4,CarregaWordMDR,SolicitaDado3,Wait5,
 	CarregaHalfWordMDR,EscreveMemoriaByte,EscreveMemoriaHalfWord,EscreveMemoriaWord,WriteRegRD,Shift1,
-	Shift2,Shift3,SolicitaDado4,Wait6;
+	Shift2,Shift3,SolicitaDado4,Wait6,SolicitaDado5,Wait7, Mult, MultWait, Mult2, Div, DivWait, Div2, Exception, Mfhi, Mflo;
 	//OpCodes
 	reg [5:0] ADDI = 6'd8, ADDIU = 6'd9, LB = 6'd32, LW = 6'd35, LH = 6'd33,SB = 6'd40, SH = 6'd41,
 	SW = 6'd43, BEQ = 6'd4, BNE = 6'd5, BLE = 6'd6, BGT = 6'd7;
@@ -24,7 +25,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 	
 	// Funções
 	reg [5:0] ADD = 6'b100000, SUB = 6'b100010, AND = 6'b100100,SLL = 6'd0,SLLV = 6'd4,SRA = 6'd3,
-	SRAV = 6'd7,SRL = 6'd2;
+	SRAV = 6'd7,SRL = 6'd2, MULT = 6'h18, DIV = 6'h1A, MFHI = 6'h10, MFLO = 6'h12;
 	
 	
 	
@@ -76,6 +77,14 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 		Wait6 <= 7'd26;
 		SolicitaDado5 <= 7'd27;
 		Wait7 <= 7'd28;
+		Mult <= 7'd29; 
+		MultWait <= 7'd30;
+		Mult2 <= 7'd31;
+		Div <= 7'd32;
+		DivWait <= 7'd33;
+		Div2 <= 7'd34;
+		Mfhi <= 7'd35;
+		Mflo <= 7'd36;
 	end
 		
 	always @(posedge clock) begin
@@ -129,6 +138,7 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 				ALUout <= 1'b0;
 				MDRWrite <= 1'b0;
 				PCWriteCond <= 1'b0;
+				HiLoCtrl <= 0;
 				
 				Estado <= Branch;
 			end
@@ -604,6 +614,18 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 								Shift <= 3'b001;
 								Estado <= Shift3;
 							end
+							MULT:begin 
+								Estado <= Mult;
+							end	
+							DIV:begin
+								Estado <= Div;
+							end							
+							MFHI:begin
+								Estado <= Mfhi;
+							end							
+							MFLO:begin
+								Estado <= Mflo;
+							end
 						endcase
 					end
 					ADDI: begin //Addi e salva em ALUout
@@ -811,6 +833,82 @@ module Controler (opcode,func,clock,Reset,PCWrite,IorD,MemWrite,MemToReg,IRWrite
 						ALUSrcB <= 2'b000;
 						PCSrc <= 3'b000;
 						ALUcond <= 2'b01;
+						Estado <= Fetch;
+					end
+					Div: begin
+					DivCtrl <= 1;
+					
+					Estado <= DivWait;
+					end
+					DivWait: begin
+						DivCtrl <= 0;
+					
+						if(counter == 32) begin
+							Estado <= Div2;
+						end else begin 
+							counter = counter + 1;
+							Estado <= DivWait;
+						end
+					end
+					Div2: begin
+						MultDivSel <= 0;
+						HiLoCtrl <= 1;
+					
+						if(div0 == 1) begin
+							Estado <= Div0;
+						end else begin
+							Estado <= Fetch;
+						end
+					end
+					Div0: begin
+						ALUSrcA <= 2'b00;
+						ALUSrcB <= 3'b001;
+						ALUop <= 2;
+						EPCWrite <= 1;
+						IorD <= 3;
+						WR <= 0;
+					
+						Estado <= Exception;
+					end
+					Exception: begin
+						PCSrc <= 4;
+						PCWrite <= 1;
+					
+						Estado <= Fetch;
+					end
+					Mult: begin
+						MultCtrl <= 1;
+					
+						Estado <= MultWait;
+					end
+					MultWait: begin
+						MultCtrl <= 0;
+					
+						if(counter == 32) begin
+							Estado <= Mult2;
+						end else begin 
+							counter = counter + 1;
+							Estado <= MultWait;
+						end
+					end
+					Mult2: begin
+						MultDivSel <= 1;
+						HiLoCtrl <= 1;
+					
+						Estado <= Fetch;
+					end
+					Mfhi: begin
+						RegDst <= 3;
+						MemToReg <= 4;
+						RegWrite <= 1;
+					
+						Estado <= Fetch;
+					end
+					Mflo: begin
+						RegDst <= 3;
+						MemToReg <= 5;
+						RegWrite <= 1;
+					
 						Estado <= Fetch;
 					end
 				endcase

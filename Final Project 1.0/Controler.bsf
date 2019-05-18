@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 216 464)
+	(rect 16 16 216 560)
 	(text "Controler" (rect 5 0 49 12)(font "Arial" ))
-	(text "inst" (rect 8 432 25 444)(font "Arial" ))
+	(text "inst" (rect 8 528 25 540)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -219,7 +219,42 @@ applicable agreement for further details.
 		(text "RDx" (rect 157 411 179 423)(font "Arial" ))
 		(line (pt 200 416)(pt 184 416)(line_width 1))
 	)
+	(port
+		(pt 200 432)
+		(output)
+		(text "MultCtrl" (rect 0 0 37 12)(font "Arial" ))
+		(text "MultCtrl" (rect 142 427 179 439)(font "Arial" ))
+		(line (pt 200 432)(pt 184 432)(line_width 1))
+	)
+	(port
+		(pt 200 448)
+		(output)
+		(text "DivCtrl" (rect 0 0 35 12)(font "Arial" ))
+		(text "DivCtrl" (rect 144 443 179 455)(font "Arial" ))
+		(line (pt 200 448)(pt 184 448)(line_width 1))
+	)
+	(port
+		(pt 200 464)
+		(output)
+		(text "HiLoCtrl" (rect 0 0 40 12)(font "Arial" ))
+		(text "HiLoCtrl" (rect 139 459 179 471)(font "Arial" ))
+		(line (pt 200 464)(pt 184 464)(line_width 1))
+	)
+	(port
+		(pt 200 480)
+		(output)
+		(text "MultDivSel" (rect 0 0 53 12)(font "Arial" ))
+		(text "MultDivSel" (rect 126 475 179 487)(font "Arial" ))
+		(line (pt 200 480)(pt 184 480)(line_width 1))
+	)
+	(port
+		(pt 200 496)
+		(output)
+		(text "EPCWrite" (rect 0 0 48 12)(font "Arial" ))
+		(text "EPCWrite" (rect 131 491 179 503)(font "Arial" ))
+		(line (pt 200 496)(pt 184 496)(line_width 1))
+	)
 	(drawing
-		(rectangle (rect 16 16 184 432)(line_width 1))
+		(rectangle (rect 16 16 184 528)(line_width 1))
 	)
 )
